@@ -1,0 +1,35 @@
+{
+  "system": "V2",
+  "query_id": "QF1.4",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "beef_wellington"
+  ],
+  "answer": "The provided recipe context does not include any information about the difficulty level of Beef Wellington.",
+  "per_turn_responses": [
+    "The provided recipe context does not include any information about the difficulty level of Beef Wellington."
+  ],
+  "retrieved_recipe_ids": [
+    "beef_wellington",
+    "lasagna",
+    "frittata",
+    "avocado_toast",
+    "char_siu_pork"
+  ],
+  "per_turn_retrieved": [
+    [
+      "beef_wellington",
+      "lasagna",
+      "frittata",
+      "avocado_toast",
+      "char_siu_pork"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.536135196685791,
+  "token_usage": {
+    "input": 772,
+    "output": 166
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF4.5",
+  "family": "conversational",
+  "subtype": "memory_constraint_override",
+  "gold_recipe_ids": [],
+  "answer": "I don't have any recipes in my knowledge base to adjust for a vegetarian change. Please provide more details or a new request.",
+  "per_turn_responses": [
+    "You have three chicken recipes available tonight:\n\n1. **Indian Chicken Curry** (id=chicken_curry) – A creamy, medium-spiced curry with coconut milk, ready in 55 minutes. Dairy-free and gluten-free.\n2. **Southern Fried Chicken** (id=fried_chicken) – Classic crispy fried chicken, ready in 40 minutes. Contains gluten and dairy.\n3. **Kung Pao Chicken** (id=kung_pao_chicken) – A spicy Sichuan stir-fry with peanuts and chilies, ready in 25 minutes. Dairy-free but contains peanuts, soy, and gluten.\n\nAll are chicken-based and suitable for tonight. Choose based on your preferred cuisine, spice level, and dietary needs.",
+    "I don't have any recipes in my knowledge base to adjust for a vegetarian change. Please provide more details or a new request."
+  ],
+  "retrieved_recipe_ids": [],
+  "per_turn_retrieved": [
+    [
+      "chicken_curry",
+      "fried_chicken",
+      "kung_pao_chicken"
+    ],
+    []
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "main_protein": "chicken"
+          }
+        },
+        "result_summary": [
+          "chicken_curry",
+          "fried_chicken",
+          "kung_pao_chicken"
+        ]
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "main_protein": "chicken"
+        },
+        "result_summary": [
+          "chicken_curry",
+          "fried_chicken",
+          "kung_pao_chicken"
+        ]
+      }
+    ],
+    []
+  ],
+  "latency_seconds": 23.538960933685303,
+  "token_usage": {
+    "input": 1965,
+    "output": 1827
+  }
+}

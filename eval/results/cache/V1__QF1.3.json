@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF1.3",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "chicken_curry"
+  ],
+  "answer": "The chicken curry recipe makes 4 servings.",
+  "per_turn_responses": [
+    "The chicken curry recipe makes 4 servings."
+  ],
+  "retrieved_recipe_ids": [
+    "chicken_curry",
+    "fried_chicken",
+    "massaman_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "chicken_curry",
+      "fried_chicken",
+      "massaman_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.0284407138824463,
+  "token_usage": {
+    "input": 464,
+    "output": 34
+  }
+}

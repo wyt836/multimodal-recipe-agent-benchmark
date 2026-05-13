@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF2.2",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "lasagna"
+  ],
+  "answer": "The Classic Beef Lasagna has a layered, stacked presentation in its image.",
+  "per_turn_responses": [
+    "The Classic Beef Lasagna has a layered, stacked presentation in its image."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "lasagna",
+    "fried_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "lasagna",
+      "fried_chicken"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.6585981845855713,
+  "token_usage": {
+    "input": 467,
+    "output": 126
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF2.4",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_filter",
+  "gold_recipe_ids": [
+    "tonkatsu"
+  ],
+  "answer": "Tonkatsu (id=tonkatsu) is a Japanese dish with a thick, golden-brown, crispy panko coating.",
+  "per_turn_responses": [
+    "Tonkatsu (id=tonkatsu) is a Japanese dish with a thick, golden-brown, crispy panko coating."
+  ],
+  "retrieved_recipe_ids": [
+    "fried_chicken",
+    "tempura",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "fried_chicken",
+      "tempura",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "Japanese golden crispy fried coating",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.49458765983581543,
+            "name": "Southern Fried Chicken"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.48368263244628906,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.472970187664032,
+            "name": "Tonkatsu"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 23.34536862373352,
+  "token_usage": {
+    "input": 1281,
+    "output": 1865
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF1.3",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "chicken_curry"
+  ],
+  "answer": "The Indian Chicken Curry recipe makes 4 servings.",
+  "per_turn_responses": [
+    "The Indian Chicken Curry recipe makes 4 servings."
+  ],
+  "retrieved_recipe_ids": [
+    "chicken_curry",
+    "fried_chicken",
+    "massaman_curry",
+    "curry_udon",
+    "tomato_egg_stirfry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "chicken_curry",
+      "fried_chicken",
+      "massaman_curry",
+      "curry_udon",
+      "tomato_egg_stirfry"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "chicken curry recipe",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.8057230114936829,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.6469521522521973,
+            "name": "Southern Fried Chicken"
+          },
+          {
+            "recipe_id": "massaman_curry",
+            "score": 0.5969997048377991,
+            "name": "Massaman Beef Curry"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.5138287544250488,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "tomato_egg_stirfry",
+            "score": 0.5053817629814148,
+            "name": "Tomato and Egg Stir-fry"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "chicken_curry"
+        },
+        "result_summary": {
+          "id": "chicken_curry",
+          "name": "Indian Chicken Curry",
+          "cuisine": "Indian",
+          "prep_time_min": 15,
+          "cooking_time_min": 40
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 7.589178085327148,
+  "token_usage": {
+    "input": 4174,
+    "output": 353
+  }
+}

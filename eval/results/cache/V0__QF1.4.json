@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF1.4",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "beef_wellington"
+  ],
+  "answer": "Beef Wellington is generally considered an **advanced/difficult** recipe. It requires multiple components (seared beef, duxelles, prosciutto, puff pastry), precise timing, and careful assembly to avoid a soggy crust or overcooked meat.",
+  "per_turn_responses": [
+    "Beef Wellington is generally considered an **advanced/difficult** recipe. It requires multiple components (seared beef, duxelles, prosciutto, puff pastry), precise timing, and careful assembly to avoid a soggy crust or overcooked meat."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.193683624267578,
+  "token_usage": {
+    "input": 50,
+    "output": 134
+  }
+}

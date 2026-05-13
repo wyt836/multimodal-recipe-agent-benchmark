@@ -1,0 +1,166 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "I recommend **Curry Udon** (id=curry_udon) — a Japanese dish with a deep, thick mustard-yellow curry broth over thick white udon noodles. It’s not Thai, ready in 20 minutes, dairy‑free, and contains soy/gluten.",
+  "per_turn_responses": [
+    "I recommend **Curry Udon** (id=curry_udon) — a Japanese dish with a deep, thick mustard-yellow curry broth over thick white udon noodles. It’s not Thai, ready in 20 minutes, dairy‑free, and contains soy/gluten."
+  ],
+  "retrieved_recipe_ids": [
+    "curry_udon",
+    "tonkatsu",
+    "miso_soup",
+    "bibimbap",
+    "pesto_pasta",
+    "avocado_toast",
+    "chicken_curry",
+    "mapo_tofu",
+    "beef_wellington",
+    "tempura",
+    "fried_chicken",
+    "lasagna",
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata",
+    "kung_pao_chicken",
+    "char_siu_pork"
+  ],
+  "per_turn_retrieved": [
+    [
+      "curry_udon",
+      "tonkatsu",
+      "miso_soup",
+      "bibimbap",
+      "pesto_pasta",
+      "avocado_toast",
+      "chicken_curry",
+      "mapo_tofu",
+      "beef_wellington",
+      "tempura",
+      "fried_chicken",
+      "lasagna",
+      "tomato_egg_stirfry",
+      "shakshuka",
+      "frittata",
+      "kung_pao_chicken",
+      "char_siu_pork"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "yellow noodle",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.2850896120071411,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.24964702129364014,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.20206600427627563,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.18362528085708618,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "bibimbap",
+            "score": 0.18232178688049316,
+            "name": "Vegetable Bibimbap"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "search_text_content",
+        "args": {
+          "query": "yellow noodle",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.5042638778686523,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.44183528423309326,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "pesto_pasta",
+            "score": 0.4328839182853699,
+            "name": "Pesto Pasta"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.4098896384239197,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.4007191061973572,
+            "name": "Indian Chicken Curry"
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "cuisines_excluded": [
+              "Thai"
+            ]
+          }
+        },
+        "result_summary": [
+          "miso_soup",
+          "mapo_tofu",
+          "chicken_curry",
+          "beef_wellington",
+          "tonkatsu",
+          "..."
+        ]
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "cuisines_excluded": [
+            "Thai"
+          ]
+        },
+        "result_summary": [
+          "curry_udon",
+          "tonkatsu",
+          "miso_soup",
+          "bibimbap",
+          "pesto_pasta"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 26.206264972686768,
+  "token_usage": {
+    "input": 3215,
+    "output": 2244
+  }
+}

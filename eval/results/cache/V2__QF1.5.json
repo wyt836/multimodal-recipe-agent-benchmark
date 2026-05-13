@@ -1,0 +1,31 @@
+{
+  "system": "V2",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "Based solely on the provided recipe context, I cannot tell you how to make sushi rolls. The recipes available are Miso Soup, Tempura, Tonkatsu, and Vegetable Bibimbap, and none of them cover sushi.",
+  "per_turn_responses": [
+    "Based solely on the provided recipe context, I cannot tell you how to make sushi rolls. The recipes available are Miso Soup, Tempura, Tonkatsu, and Vegetable Bibimbap, and none of them cover sushi."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "tempura",
+    "tonkatsu",
+    "bibimbap"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "tempura",
+      "tonkatsu",
+      "bibimbap"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.295448064804077,
+  "token_usage": {
+    "input": 666,
+    "output": 135
+  }
+}

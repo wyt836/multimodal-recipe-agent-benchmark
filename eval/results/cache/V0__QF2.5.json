@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "Here's a quick Chinese-style yellow noodle stir-fry (not Thai) that uses classic yellow egg noodles:\n\n**Ingredients:**  \n- 200g fresh yellow egg noodles (or dried, cooked al dente)  \n- 2 tbsp soy sauce  \n- 1 tbsp oyster sauce (or vegetarian stir-fry sauce)  \n- 1 tsp sesame oil  \n- 1 tbsp vegetable oil  \n- 2 cloves garlic, minced  \n- 1 cup mixed vegetables (carrot, bell pepper, snap peas, cabbage)  \n- Protein of choice: sliced chicken, beef, tofu, or shrimp  \n- Optional: white pepper, chili flakes\n\n**Steps:**  \n1. Cook noodles according to package, drain, and toss with a drizzle of sesame oil to prevent sticking.  \n2. Heat vegetable oil in a wok or large pan over high heat. Stir-fry protein until cooked, then add garlic.  \n3. Add vegetables and stir-fry 2–3 minutes until crisp-tender.  \n4. Toss in noodles, soy sauce, oyster sauce, and a pinch of white pepper. Mix well for 1–2 minutes.  \n5. Serve hot, optionally topped with scallions or sesame seeds.\n\nThis dish is savory, slightly glossy, and full of umami—completely different from Thai yellow curry noodles.",
+  "per_turn_responses": [
+    "Here's a quick Chinese-style yellow noodle stir-fry (not Thai) that uses classic yellow egg noodles:\n\n**Ingredients:**  \n- 200g fresh yellow egg noodles (or dried, cooked al dente)  \n- 2 tbsp soy sauce  \n- 1 tbsp oyster sauce (or vegetarian stir-fry sauce)  \n- 1 tsp sesame oil  \n- 1 tbsp vegetable oil  \n- 2 cloves garlic, minced  \n- 1 cup mixed vegetables (carrot, bell pepper, snap peas, cabbage)  \n- Protein of choice: sliced chicken, beef, tofu, or shrimp  \n- Optional: white pepper, chili flakes\n\n**Steps:**  \n1. Cook noodles according to package, drain, and toss with a drizzle of sesame oil to prevent sticking.  \n2. Heat vegetable oil in a wok or large pan over high heat. Stir-fry protein until cooked, then add garlic.  \n3. Add vegetables and stir-fry 2–3 minutes until crisp-tender.  \n4. Toss in noodles, soy sauce, oyster sauce, and a pinch of white pepper. Mix well for 1–2 minutes.  \n5. Serve hot, optionally topped with scallions or sesame seeds.\n\nThis dish is savory, slightly glossy, and full of umami—completely different from Thai yellow curry noodles."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 7.620023965835571,
+  "token_usage": {
+    "input": 53,
+    "output": 499
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "system": "V3",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "Based on your request for a yellow noodle dish that is not Thai cuisine, I recommend **Curry Udon** (id=curry_udon). It's a Japanese dish with thick udon noodles in a mustard-yellow curry broth, topped with aburaage and scallion. It's dairy-free, but contains soy and gluten.",
+  "per_turn_responses": [
+    "Based on your request for a yellow noodle dish that is not Thai cuisine, I recommend **Curry Udon** (id=curry_udon). It's a Japanese dish with thick udon noodles in a mustard-yellow curry broth, topped with aburaage and scallion. It's dairy-free, but contains soy and gluten."
+  ],
+  "retrieved_recipe_ids": [
+    "curry_udon",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "curry_udon",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "yellow noodle dish",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.30176031589508057,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.27288419008255005,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.22630727291107178,
+            "name": "Tonkatsu"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[1].recipe_id"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 4,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[2].recipe_id"
+        },
+        "result_summary": null
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "cuisines_excluded": [
+            "Thai"
+          ]
+        },
+        "result_summary": [
+          "curry_udon",
+          "tonkatsu"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 26.510795831680298,
+  "token_usage": {
+    "input": 1342,
+    "output": 2442
+  }
+}

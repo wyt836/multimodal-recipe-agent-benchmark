@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF2.1",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "A classic recipe that matches this description is **Miso Soup with Tofu**. The image typically shows soft tofu cubes floating in a savory, slightly cloudy broth, often with wakame seaweed and sliced green onions. If that’s not what you’re looking for, another option is **Hot and Sour Soup**, which also features tofu cubes in a seasoned broth.",
+  "per_turn_responses": [
+    "A classic recipe that matches this description is **Miso Soup with Tofu**. The image typically shows soft tofu cubes floating in a savory, slightly cloudy broth, often with wakame seaweed and sliced green onions. If that’s not what you’re looking for, another option is **Hot and Sour Soup**, which also features tofu cubes in a seasoned broth."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.68428897857666,
+  "token_usage": {
+    "input": 52,
+    "output": 181
+  }
+}

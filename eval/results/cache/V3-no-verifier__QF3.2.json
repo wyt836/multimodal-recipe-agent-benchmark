@@ -1,0 +1,93 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF3.2",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "avocado_toast"
+  ],
+  "answer": "Among your vegetarian recipes, the one with the shortest preparation time is **Avocado Toast** (id=avocado_toast), which takes just **2 minutes** to prepare.",
+  "per_turn_responses": [
+    "Among your vegetarian recipes, the one with the shortest preparation time is **Avocado Toast** (id=avocado_toast), which takes just **2 minutes** to prepare."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "pesto_pasta",
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata",
+    "avocado_toast",
+    "bibimbap"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "pesto_pasta",
+      "tomato_egg_stirfry",
+      "shakshuka",
+      "frittata",
+      "avocado_toast",
+      "bibimbap"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "dietary_tags": [
+              "vegetarian"
+            ]
+          }
+        },
+        "result_summary": [
+          "miso_soup",
+          "pesto_pasta",
+          "tomato_egg_stirfry",
+          "shakshuka",
+          "frittata",
+          "..."
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "compute_aggregate",
+        "args": {
+          "recipe_ids": [
+            "miso_soup",
+            "pesto_pasta",
+            "tomato_egg_stirfry",
+            "shakshuka",
+            "frittata",
+            "avocado_toast",
+            "bibimbap"
+          ],
+          "op": "argmin",
+          "field": "prep_time_min"
+        },
+        "result_summary": "avocado_toast"
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "avocado_toast"
+        },
+        "result_summary": {
+          "id": "avocado_toast",
+          "name": "Avocado Toast",
+          "cuisine": "Modern Western",
+          "prep_time_min": 2,
+          "cooking_time_min": 3
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 9.730748414993286,
+  "token_usage": {
+    "input": 1869,
+    "output": 1201
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF3.4",
+  "family": "multi_hop",
+  "subtype": "multi_constraint_filter",
+  "gold_recipe_ids": [
+    "miso_soup",
+    "tonkatsu",
+    "curry_udon",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "answer": "Here are three recipes you can make in under 25 minutes, all without seafood:\n\n1. **Avocado Toast** (id=avocado_toast) – 5 minutes total  \n2. **Miso Soup** (id=miso_soup) – 20 minutes total  \n3. **Tomato and Egg Stir-fry** (id=tomato_egg_stirfry) – 8 minutes total  \n\nAll three are vegetarian, dairy-free, and use no seafood. Enjoy!",
+  "per_turn_responses": [
+    "Here are three recipes you can make in under 25 minutes, all without seafood:\n\n1. **Avocado Toast** (id=avocado_toast) – 5 minutes total  \n2. **Miso Soup** (id=miso_soup) – 20 minutes total  \n3. **Tomato and Egg Stir-fry** (id=tomato_egg_stirfry) – 8 minutes total  \n\nAll three are vegetarian, dairy-free, and use no seafood. Enjoy!"
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "miso_soup",
+    "tomato_egg_stirfry",
+    "pesto_pasta"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "miso_soup",
+      "tomato_egg_stirfry",
+      "pesto_pasta"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "quick recipes under 25 minutes",
+          "k": 10
+        },
+        "result_summary": [
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.5128297209739685,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.5118439793586731,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.5029445290565491,
+            "name": "Southern Fried Chicken"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.4593011140823364,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "tomato_egg_stirfry",
+            "score": 0.43489766120910645,
+            "name": "Tomato and Egg Stir-fry"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "avocado_toast"
+        },
+        "result_summary": {
+          "id": "avocado_toast",
+          "name": "Avocado Toast",
+          "cuisine": "Modern Western",
+          "prep_time_min": 2,
+          "cooking_time_min": 3
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "miso_soup"
+        },
+        "result_summary": {
+          "id": "miso_soup",
+          "name": "Miso Soup",
+          "cuisine": "Japanese",
+          "prep_time_min": 5,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tomato_egg_stirfry"
+        },
+        "result_summary": {
+          "id": "tomato_egg_stirfry",
+          "name": "Tomato and Egg Stir-fry",
+          "cuisine": "Chinese",
+          "prep_time_min": 3,
+          "cooking_time_min": 5
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "shakshuka"
+        },
+        "result_summary": {
+          "id": "shakshuka",
+          "name": "Shakshuka",
+          "cuisine": "Middle Eastern",
+          "prep_time_min": 5,
+          "cooking_time_min": 25
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "pesto_pasta"
+        },
+        "result_summary": {
+          "id": "pesto_pasta",
+          "name": "Pesto Pasta",
+          "cuisine": "Italian",
+          "prep_time_min": 10,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "pad_thai"
+        },
+        "result_summary": {
+          "id": "pad_thai",
+          "name": "Pad Thai",
+          "cuisine": "Thai",
+          "prep_time_min": 15,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "chicken_curry"
+        },
+        "result_summary": {
+          "id": "chicken_curry",
+          "name": "Indian Chicken Curry",
+          "cuisine": "Indian",
+          "prep_time_min": 15,
+          "cooking_time_min": 40
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "fried_chicken"
+        },
+        "result_summary": {
+          "id": "fried_chicken",
+          "name": "Southern Fried Chicken",
+          "cuisine": "American",
+          "prep_time_min": 15,
+          "cooking_time_min": 25
+        }
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "max_total_time_min": 25,
+          "ingredients_excluded": [
+            "seafood"
+          ]
+        },
+        "result_summary": [
+          "avocado_toast",
+          "miso_soup",
+          "tomato_egg_stirfry",
+          "pesto_pasta"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 25.137474298477173,
+  "token_usage": {
+    "input": 12400,
+    "output": 2009
+  }
+}

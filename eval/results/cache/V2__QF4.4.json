@@ -1,0 +1,51 @@
+{
+  "system": "V2",
+  "query_id": "QF4.4",
+  "family": "conversational",
+  "subtype": "memory_preference_conflict",
+  "gold_recipe_ids": [
+    "char_siu_pork"
+  ],
+  "answer": "Here’s a Cantonese dish from the recipe collection:\n\n**Char Siu Pork** (Cantonese barbecued pork)  \n- **Protein:** Pork shoulder  \n- **Prep:** 20 min | **Cook:** 45 min | **Total:** 65 min | **Servings:** 4  \n- **Spice level:** None  \n- **Dietary:** Dairy-free  \n- **Allergens:** Soy, gluten  \n- **Key ingredients:** Pork shoulder, hoisin sauce, honey, Chinese cooking wine, light & dark soy sauce, five-spice powder, garlic, red yeast rice paste  \n\n**Visual description:** Glossy lacquered slices of red-mahogany pork with characteristic charred dark edges and a sticky honey glaze, fanned out on a white plate with a small mound of jasmine rice.\n\nWould you like the full recipe steps or any modifications?",
+  "per_turn_responses": [
+    "Based on the recipe context, if you don't like spicy food, the best options are **Southern Fried Chicken** (spicy=low) and **Avocado Toast** (spicy=low). \n\nThe **Indian Chicken Curry** and **Kung Pao Chicken** are both listed as medium spicy, while **Mapo Tofu** is described as high spicy, so those would likely not suit you.",
+    "Based on the recipe context, there are two Sichuan dishes: **Mapo Tofu** (spicy, with ground pork and silken tofu in a chili oil sauce) and **Kung Pao Chicken** (medium spicy, with chicken, peanuts, and dried chilies).",
+    "Here’s a Cantonese dish from the recipe collection:\n\n**Char Siu Pork** (Cantonese barbecued pork)  \n- **Protein:** Pork shoulder  \n- **Prep:** 20 min | **Cook:** 45 min | **Total:** 65 min | **Servings:** 4  \n- **Spice level:** None  \n- **Dietary:** Dairy-free  \n- **Allergens:** Soy, gluten  \n- **Key ingredients:** Pork shoulder, hoisin sauce, honey, Chinese cooking wine, light & dark soy sauce, five-spice powder, garlic, red yeast rice paste  \n\n**Visual description:** Glossy lacquered slices of red-mahogany pork with characteristic charred dark edges and a sticky honey glaze, fanned out on a white plate with a small mound of jasmine rice.\n\nWould you like the full recipe steps or any modifications?"
+  ],
+  "retrieved_recipe_ids": [
+    "char_siu_pork",
+    "kung_pao_chicken",
+    "miso_soup",
+    "tonkatsu",
+    "mapo_tofu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "chicken_curry",
+      "mapo_tofu",
+      "fried_chicken",
+      "kung_pao_chicken",
+      "avocado_toast"
+    ],
+    [
+      "char_siu_pork",
+      "mapo_tofu",
+      "kung_pao_chicken",
+      "miso_soup",
+      "massaman_curry"
+    ],
+    [
+      "char_siu_pork",
+      "kung_pao_chicken",
+      "miso_soup",
+      "tonkatsu",
+      "mapo_tofu"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 9.652913808822632,
+  "token_usage": {
+    "input": 2335,
+    "output": 721
+  }
+}

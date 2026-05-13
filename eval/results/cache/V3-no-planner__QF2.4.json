@@ -1,0 +1,136 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF2.4",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_filter",
+  "gold_recipe_ids": [
+    "tonkatsu"
+  ],
+  "answer": "Tonkatsu (id=tonkatsu) – a Japanese breaded and deep-fried pork cutlet with a golden, crispy panko coating.",
+  "per_turn_responses": [
+    "Tonkatsu (id=tonkatsu) – a Japanese breaded and deep-fried pork cutlet with a golden, crispy panko coating."
+  ],
+  "retrieved_recipe_ids": [
+    "tempura",
+    "fried_chicken",
+    "tonkatsu",
+    "curry_udon",
+    "miso_soup",
+    "tomato_egg_stirfry",
+    "kung_pao_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "tempura",
+      "fried_chicken",
+      "tonkatsu",
+      "curry_udon",
+      "miso_soup",
+      "tomato_egg_stirfry",
+      "kung_pao_chicken"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "Japanese dish golden crispy fried coating",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "tempura",
+            "score": 0.5071728825569153,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.4984701871871948,
+            "name": "Southern Fried Chicken"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.49533456563949585,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.46066826581954956,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.4600912928581238,
+            "name": "Miso Soup"
+          }
+        ]
+      },
+      {
+        "tool": "search_image_visual",
+        "args": {
+          "query": "Japanese golden crispy fried food",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.3135441541671753,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "tomato_egg_stirfry",
+            "score": 0.30886322259902954,
+            "name": "Tomato and Egg Stir-fry"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.2907797694206238,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.27220451831817627,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "kung_pao_chicken",
+            "score": 0.2528972625732422,
+            "name": "Kung Pao Chicken"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tonkatsu"
+        },
+        "result_summary": {
+          "id": "tonkatsu",
+          "name": "Tonkatsu",
+          "cuisine": "Japanese",
+          "prep_time_min": 10,
+          "cooking_time_min": 12
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tempura"
+        },
+        "result_summary": {
+          "id": "tempura",
+          "name": "Tempura",
+          "cuisine": "Japanese",
+          "prep_time_min": 15,
+          "cooking_time_min": 15
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 22.28890299797058,
+  "token_usage": {
+    "input": 5478,
+    "output": 1521
+  }
+}

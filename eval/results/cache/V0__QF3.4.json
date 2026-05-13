@@ -1,0 +1,24 @@
+{
+  "system": "V0",
+  "query_id": "QF3.4",
+  "family": "multi_hop",
+  "subtype": "multi_constraint_filter",
+  "gold_recipe_ids": [
+    "miso_soup",
+    "tonkatsu",
+    "curry_udon",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "answer": "Here are 3 quick (under 25 minutes), seafood-free recipes:\n\n---\n\n**1. Garlic Butter Pasta with Spinach & Parmesan**  \n- Cook 200g pasta (spaghetti or penne) in salted boiling water according to package directions (usually 8-10 mins).  \n- While pasta cooks, melt 2 tbsp butter in a large pan, add 3 minced garlic cloves and cook 1 min.  \n- Add 2 big handfuls of fresh spinach, toss until wilted (2 mins).  \n- Drain pasta, reserving ¼ cup pasta water. Add pasta to the pan with spinach, stir in ½ cup grated Parmesan and enough pasta water to make a light sauce. Season with salt, pepper, and red pepper flakes.  \n- Total: ~15 minutes.\n\n**2. Chicken & Veggie Stir-Fry**  \n- Slice 1 boneless chicken breast into thin strips. Mix with 1 tbsp soy sauce.  \n- Heat 1 tbsp oil in a wok or large skillet over high heat. Stir-fry chicken for 3–4 mins until cooked, then remove.  \n- Add 2 cups mixed frozen veggies (broccoli, bell peppers, snap peas) and stir-fry 3–4 mins.  \n- Return chicken, add 2 tbsp soy sauce, 1 tbsp honey, and 1 tsp sesame oil. Toss 1 min. Serve over instant rice (if using, cook according to package, about 5 mins).  \n- Total: ~18 minutes (including rice).\n\n**3. Black Bean & Avocado Quesadillas**  \n- Mash 1 can (15 oz) black beans (drained and rinsed) with a fork. Stir in ½ tsp cumin, ½ tsp chili powder, and salt.  \n- Spread bean mixture over 4 small flour tortillas. Top with shredded cheddar or Monterey Jack cheese, sliced avocado, and optional corn or jalapeños.  \n- Fold tortillas in half. Cook in a dry or lightly oiled skillet over medium heat, 2–3 mins per side until golden and cheese melts.  \n- Serve with salsa and/or sour cream.  \n- Total: ~12 minutes.",
+  "per_turn_responses": [
+    "Here are 3 quick (under 25 minutes), seafood-free recipes:\n\n---\n\n**1. Garlic Butter Pasta with Spinach & Parmesan**  \n- Cook 200g pasta (spaghetti or penne) in salted boiling water according to package directions (usually 8-10 mins).  \n- While pasta cooks, melt 2 tbsp butter in a large pan, add 3 minced garlic cloves and cook 1 min.  \n- Add 2 big handfuls of fresh spinach, toss until wilted (2 mins).  \n- Drain pasta, reserving ¼ cup pasta water. Add pasta to the pan with spinach, stir in ½ cup grated Parmesan and enough pasta water to make a light sauce. Season with salt, pepper, and red pepper flakes.  \n- Total: ~15 minutes.\n\n**2. Chicken & Veggie Stir-Fry**  \n- Slice 1 boneless chicken breast into thin strips. Mix with 1 tbsp soy sauce.  \n- Heat 1 tbsp oil in a wok or large skillet over high heat. Stir-fry chicken for 3–4 mins until cooked, then remove.  \n- Add 2 cups mixed frozen veggies (broccoli, bell peppers, snap peas) and stir-fry 3–4 mins.  \n- Return chicken, add 2 tbsp soy sauce, 1 tbsp honey, and 1 tsp sesame oil. Toss 1 min. Serve over instant rice (if using, cook according to package, about 5 mins).  \n- Total: ~18 minutes (including rice).\n\n**3. Black Bean & Avocado Quesadillas**  \n- Mash 1 can (15 oz) black beans (drained and rinsed) with a fork. Stir in ½ tsp cumin, ½ tsp chili powder, and salt.  \n- Spread bean mixture over 4 small flour tortillas. Top with shredded cheddar or Monterey Jack cheese, sliced avocado, and optional corn or jalapeños.  \n- Fold tortillas in half. Cook in a dry or lightly oiled skillet over medium heat, 2–3 mins per side until golden and cheese melts.  \n- Serve with salsa and/or sour cream.  \n- Total: ~12 minutes."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 5.672625541687012,
+  "token_usage": {
+    "input": 59,
+    "output": 489
+  }
+}

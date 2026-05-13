@@ -1,0 +1,136 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF2.3",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "pesto_pasta"
+  ],
+  "answer": "The recipe with a bright green herb garnish on top is **Indian Chicken Curry** (id=chicken_curry) – it’s garnished with chopped fresh coriander leaves.",
+  "per_turn_responses": [
+    "The recipe with a bright green herb garnish on top is **Indian Chicken Curry** (id=chicken_curry) – it’s garnished with chopped fresh coriander leaves."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "pesto_pasta",
+    "miso_soup",
+    "tempura",
+    "beef_wellington",
+    "chicken_curry",
+    "fried_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "pesto_pasta",
+      "miso_soup",
+      "tempura",
+      "beef_wellington",
+      "chicken_curry",
+      "fried_chicken"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_image_visual",
+        "args": {
+          "query": "bright green herb garnish on top",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.22929352521896362,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "pesto_pasta",
+            "score": 0.2287304401397705,
+            "name": "Pesto Pasta"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.1853940486907959,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.14782202243804932,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "beef_wellington",
+            "score": 0.1310245394706726,
+            "name": "Beef Wellington"
+          }
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "bright green herb garnish on top",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.47014564275741577,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "pesto_pasta",
+            "score": 0.4428790211677551,
+            "name": "Pesto Pasta"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.3412016034126282,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.33704864978790283,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.315036416053772,
+            "name": "Southern Fried Chicken"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "avocado_toast"
+        },
+        "result_summary": {
+          "id": "avocado_toast",
+          "name": "Avocado Toast",
+          "cuisine": "Modern Western",
+          "prep_time_min": 2,
+          "cooking_time_min": 3
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "pesto_pasta"
+        },
+        "result_summary": {
+          "id": "pesto_pasta",
+          "name": "Pesto Pasta",
+          "cuisine": "Italian",
+          "prep_time_min": 10,
+          "cooking_time_min": 15
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 17.938856840133667,
+  "token_usage": {
+    "input": 5307,
+    "output": 1308
+  }
+}

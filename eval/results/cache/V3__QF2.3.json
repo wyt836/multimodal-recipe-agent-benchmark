@@ -1,0 +1,59 @@
+{
+  "system": "V3",
+  "query_id": "QF2.3",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "pesto_pasta"
+  ],
+  "answer": "The recipe with a bright green herb garnish on top is **Pesto Pasta** (id=pesto_pasta). Its caption describes it as \"topped with several whole fresh basil leaves.\"",
+  "per_turn_responses": [
+    "The recipe with a bright green herb garnish on top is **Pesto Pasta** (id=pesto_pasta). Its caption describes it as \"topped with several whole fresh basil leaves.\""
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "pesto_pasta",
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "pesto_pasta",
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "bright green herb garnish on top",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.22929352521896362,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "pesto_pasta",
+            "score": 0.2287304401397705,
+            "name": "Pesto Pasta"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.1853940486907959,
+            "name": "Miso Soup"
+          }
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 14.827558755874634,
+  "token_usage": {
+    "input": 1448,
+    "output": 1174
+  }
+}

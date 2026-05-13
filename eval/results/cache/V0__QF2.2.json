@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF2.2",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "lasagna"
+  ],
+  "answer": "I don't have enough context to identify which specific recipe you're referring to, as I don't see an image or a list of recipes. Could you provide more details, such as the name of the dish or the source? If you're asking generally, many recipes have a layered, stacked presentation—like lasagna, layer cakes, parfaits, or Napoleon pastry—but I can't pinpoint one without more information.",
+  "per_turn_responses": [
+    "I don't have enough context to identify which specific recipe you're referring to, as I don't see an image or a list of recipes. Could you provide more details, such as the name of the dish or the source? If you're asking generally, many recipes have a layered, stacked presentation—like lasagna, layer cakes, parfaits, or Napoleon pastry—but I can't pinpoint one without more information."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 3.3203513622283936,
+  "token_usage": {
+    "input": 52,
+    "output": 282
+  }
+}

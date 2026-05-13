@@ -1,0 +1,78 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF4.1",
+  "family": "conversational",
+  "subtype": "memory_dietary_allergen",
+  "gold_recipe_ids": [
+    "tom_yum_soup"
+  ],
+  "answer": "I don't have a matching recipe in my knowledge base to compare or suggest a quicker alternative.",
+  "per_turn_responses": [
+    "Thank you for letting me know about your peanut allergy. I'll keep that in mind for any future recommendations. Unfortunately, I don't have any matching recipes in my knowledge base at the moment.",
+    "Sure! You can try **Pad Thai** (id: `pad_thai`). It's a classic Thai stir-fry with rice noodles, shrimp, egg, and a sweet-sour-savory sauce, topped with crunchy peanuts and fresh bean sprouts. Ready in just 30 minutes and serves 2.",
+    "I don't have a matching recipe in my knowledge base to compare or suggest a quicker alternative."
+  ],
+  "retrieved_recipe_ids": [],
+  "per_turn_retrieved": [
+    [],
+    [
+      "pad_thai",
+      "massaman_curry",
+      "tom_yum_soup"
+    ],
+    []
+  ],
+  "tool_calls": [
+    [],
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "cuisine": "Thai"
+          }
+        },
+        "result_summary": [
+          "pad_thai",
+          "massaman_curry",
+          "tom_yum_soup"
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "compute_aggregate",
+        "args": {
+          "recipe_ids": [
+            "pad_thai",
+            "massaman_curry",
+            "tom_yum_soup"
+          ],
+          "op": "argmin",
+          "field": "total_time_min"
+        },
+        "result_summary": "tom_yum_soup"
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tom_yum_soup"
+        },
+        "result_summary": {
+          "id": "tom_yum_soup",
+          "name": "Tom Yum Goong",
+          "cuisine": "Thai",
+          "prep_time_min": 10,
+          "cooking_time_min": 15
+        }
+      }
+    ],
+    []
+  ],
+  "latency_seconds": 33.80495524406433,
+  "token_usage": {
+    "input": 2699,
+    "output": 2773
+  }
+}

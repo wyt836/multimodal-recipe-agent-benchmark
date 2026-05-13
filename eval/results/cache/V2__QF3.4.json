@@ -1,0 +1,39 @@
+{
+  "system": "V2",
+  "query_id": "QF3.4",
+  "family": "multi_hop",
+  "subtype": "multi_constraint_filter",
+  "gold_recipe_ids": [
+    "miso_soup",
+    "tonkatsu",
+    "curry_udon",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "answer": "Based on the provided recipe context, there is only **one** recipe that meets both criteria (total time under 25 minutes and no seafood):\n\n- **Avocado Toast** (total 5 minutes, protein=none, no seafood)\n\nThe other recipes either exceed 24 minutes total time (Southern Fried Chicken at 40 min, Indian Chicken Curry at 55 min, Pad Thai at 30 min) or contain seafood (Tom Yum Goong has shrimp, Pad Thai has shrimp). Tom Yum Goong's total time is exactly 25 minutes, which is not under 25.\n\nTherefore, I cannot provide three recipes that satisfy your request based solely on the given context.",
+  "per_turn_responses": [
+    "Based on the provided recipe context, there is only **one** recipe that meets both criteria (total time under 25 minutes and no seafood):\n\n- **Avocado Toast** (total 5 minutes, protein=none, no seafood)\n\nThe other recipes either exceed 24 minutes total time (Southern Fried Chicken at 40 min, Indian Chicken Curry at 55 min, Pad Thai at 30 min) or contain seafood (Tom Yum Goong has shrimp, Pad Thai has shrimp). Tom Yum Goong's total time is exactly 25 minutes, which is not under 25.\n\nTherefore, I cannot provide three recipes that satisfy your request based solely on the given context."
+  ],
+  "retrieved_recipe_ids": [
+    "fried_chicken",
+    "tom_yum_soup",
+    "chicken_curry",
+    "pad_thai",
+    "avocado_toast"
+  ],
+  "per_turn_retrieved": [
+    [
+      "fried_chicken",
+      "tom_yum_soup",
+      "chicken_curry",
+      "pad_thai",
+      "avocado_toast"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 6.849228620529175,
+  "token_usage": {
+    "input": 792,
+    "output": 582
+  }
+}

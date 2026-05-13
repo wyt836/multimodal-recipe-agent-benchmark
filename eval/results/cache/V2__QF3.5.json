@@ -1,0 +1,33 @@
+{
+  "system": "V2",
+  "query_id": "QF3.5",
+  "family": "multi_hop",
+  "subtype": "aggregate_computation",
+  "gold_recipe_ids": [],
+  "answer": "The average cooking time for your Asian recipes is **38.75 minutes**.\n\n- Miso Soup: 15 minutes\n- Massaman Beef Curry: 90 minutes\n- Char Siu Pork: 45 minutes\n- Tomato and Egg Stir-fry: 5 minutes\n\n(Total 155 minutes ÷ 4 recipes)",
+  "per_turn_responses": [
+    "The average cooking time for your Asian recipes is **38.75 minutes**.\n\n- Miso Soup: 15 minutes\n- Massaman Beef Curry: 90 minutes\n- Char Siu Pork: 45 minutes\n- Tomato and Egg Stir-fry: 5 minutes\n\n(Total 155 minutes ÷ 4 recipes)"
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "massaman_curry",
+    "char_siu_pork",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "massaman_curry",
+      "char_siu_pork",
+      "tomato_egg_stirfry",
+      "avocado_toast"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.495075225830078,
+  "token_usage": {
+    "input": 763,
+    "output": 209
+  }
+}

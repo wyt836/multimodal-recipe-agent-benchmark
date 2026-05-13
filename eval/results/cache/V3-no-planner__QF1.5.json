@@ -1,0 +1,233 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "I don't have a matching recipe for sushi rolls in my knowledge base.",
+  "per_turn_responses": [
+    "I don't have a matching recipe for sushi rolls in my knowledge base."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "tempura",
+    "tonkatsu",
+    "avocado_toast",
+    "char_siu_pork",
+    "curry_udon",
+    "bibimbap",
+    "beef_wellington",
+    "mapo_tofu",
+    "chicken_curry",
+    "pad_thai",
+    "fried_chicken",
+    "lasagna",
+    "pesto_pasta",
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata",
+    "massaman_curry",
+    "tom_yum_soup",
+    "kung_pao_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "tempura",
+      "tonkatsu",
+      "avocado_toast",
+      "char_siu_pork",
+      "curry_udon",
+      "bibimbap",
+      "beef_wellington",
+      "mapo_tofu",
+      "chicken_curry",
+      "pad_thai",
+      "fried_chicken",
+      "lasagna",
+      "pesto_pasta",
+      "tomato_egg_stirfry",
+      "shakshuka",
+      "frittata",
+      "massaman_curry",
+      "tom_yum_soup",
+      "kung_pao_chicken"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "sushi rolls recipe",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5509620904922485,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.5192257165908813,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.5165915489196777,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.49933087825775146,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.4975341558456421,
+            "name": "Char Siu Pork"
+          }
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "k": 5,
+          "query": "sushi roll maki nori rice"
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.511130154132843,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.49030375480651855,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.4766172170639038,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.44315218925476074,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.44294583797454834,
+            "name": "Avocado Toast"
+          }
+        ]
+      },
+      {
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "cuisine": "japanese",
+            "type": "roll"
+          }
+        },
+        "result_summary": [
+          "miso_soup",
+          "tonkatsu",
+          "tempura",
+          "curry_udon"
+        ]
+      },
+      {
+        "tool": "search_image_visual",
+        "args": {
+          "query": "sushi rolls",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "tempura",
+            "score": 0.24706310033798218,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.20377612113952637,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "bibimbap",
+            "score": 0.1705716848373413,
+            "name": "Vegetable Bibimbap"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.16427451372146606,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "beef_wellington",
+            "score": 0.1553463339805603,
+            "name": "Beef Wellington"
+          }
+        ]
+      },
+      {
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "type": "main"
+          }
+        },
+        "result_summary": [
+          "miso_soup",
+          "mapo_tofu",
+          "chicken_curry",
+          "beef_wellington",
+          "pad_thai",
+          "..."
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "k": 5,
+          "query": "sushi"
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5238317847251892,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.49012213945388794,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.4780486822128296,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.47476065158843994,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.45052266120910645,
+            "name": "Char Siu Pork"
+          }
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 12.941920757293701,
+  "token_usage": {
+    "input": 10171,
+    "output": 698
+  }
+}

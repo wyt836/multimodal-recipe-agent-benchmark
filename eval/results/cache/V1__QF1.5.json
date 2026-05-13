@@ -1,0 +1,29 @@
+{
+  "system": "V1",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "I cannot answer that based on the provided recipe context. The context only includes recipes for Miso Soup, Tempura, and Tonkatsu. There is no recipe for sushi rolls.",
+  "per_turn_responses": [
+    "I cannot answer that based on the provided recipe context. The context only includes recipes for Miso Soup, Tempura, and Tonkatsu. There is no recipe for sushi rolls."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "tempura",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "tempura",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.6635663509368896,
+  "token_usage": {
+    "input": 460,
+    "output": 66
+  }
+}

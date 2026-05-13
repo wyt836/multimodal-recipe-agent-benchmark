@@ -1,0 +1,60 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF3.1",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "answer": "I don't have a matching recipe in my knowledge base to suggest based on your ingredients.",
+  "per_turn_responses": [
+    "I don't have a matching recipe in my knowledge base to suggest based on your ingredients."
+  ],
+  "retrieved_recipe_ids": [],
+  "per_turn_retrieved": [
+    []
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "ingredients_required": [
+              "eggs",
+              "tomatoes",
+              "onions"
+            ]
+          }
+        },
+        "result_summary": []
+      },
+      {
+        "step": 2,
+        "tool": "compute_aggregate",
+        "args": {
+          "recipe_ids": [],
+          "op": "argmin",
+          "field": "total_time_min"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": null
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 8.82693076133728,
+  "token_usage": {
+    "input": 734,
+    "output": 703
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "system": "V3",
+  "query_id": "QF1.2",
+  "family": "factual",
+  "subtype": "in_kb_ingredient_list",
+  "gold_recipe_ids": [
+    "mapo_tofu"
+  ],
+  "answer": "For Mapo Tofu, you need: soft tofu, ground pork, doubanjiang (broad bean paste), garlic, ginger, Sichuan peppercorn, chili oil, green onion, light soy sauce, and cornstarch slurry.",
+  "per_turn_responses": [
+    "For Mapo Tofu, you need: soft tofu, ground pork, doubanjiang (broad bean paste), garlic, ginger, Sichuan peppercorn, chili oil, green onion, light soy sauce, and cornstarch slurry."
+  ],
+  "retrieved_recipe_ids": [
+    "mapo_tofu",
+    "miso_soup",
+    "curry_udon"
+  ],
+  "per_turn_retrieved": [
+    [
+      "mapo_tofu",
+      "miso_soup",
+      "curry_udon"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "mapo tofu",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "mapo_tofu",
+            "score": 0.8632523417472839,
+            "name": "Mapo Tofu"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.49529361724853516,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.47653377056121826,
+            "name": "Curry Udon"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": [
+            {
+              "recipe_id": "mapo_tofu",
+              "score": 0.8632523417472839,
+              "name": "Mapo Tofu"
+            },
+            {
+              "recipe_id": "miso_soup",
+              "score": 0.49529361724853516,
+              "name": "Miso Soup"
+            },
+            {
+              "recipe_id": "curry_udon",
+              "score": 0.47653377056121826,
+              "name": "Curry Udon"
+            }
+          ]
+        },
+        "error": "cannot use 'list' as a dict key (unhashable type: 'list')"
+      }
+    ]
+  ],
+  "latency_seconds": 8.047302484512329,
+  "token_usage": {
+    "input": 1454,
+    "output": 555
+  }
+}

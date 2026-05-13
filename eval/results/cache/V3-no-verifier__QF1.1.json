@@ -1,0 +1,53 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF1.1",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "The miso soup takes 15 minutes to cook.",
+  "per_turn_responses": [
+    "The miso soup takes 15 minutes to cook."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "miso soup",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.8571224212646484,
+            "name": "Miso Soup"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 8.331467628479004,
+  "token_usage": {
+    "input": 1039,
+    "output": 608
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "system": "V2",
+  "query_id": "QF3.1",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "answer": "Based on your ingredients (eggs, tomatoes, onions), the only recipe in the context that uses exactly those plus common pantry staples (oil, salt, sugar) is **Tomato and Egg Stir-fry**. The other two recipes—Shakshuka and Tomato Onion Frittata—require additional ingredients such as canned tomatoes, bell peppers, feta, or parmesan, which you didn’t mention having.\n\nBetween all three, **Tomato and Egg Stir-fry** is also the fastest option, with a total time of 8 minutes (3 min prep + 5 min cook).",
+  "per_turn_responses": [
+    "Based on your ingredients (eggs, tomatoes, onions), the only recipe in the context that uses exactly those plus common pantry staples (oil, salt, sugar) is **Tomato and Egg Stir-fry**. The other two recipes—Shakshuka and Tomato Onion Frittata—require additional ingredients such as canned tomatoes, bell peppers, feta, or parmesan, which you didn’t mention having.\n\nBetween all three, **Tomato and Egg Stir-fry** is also the fastest option, with a total time of 8 minutes (3 min prep + 5 min cook)."
+  ],
+  "retrieved_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "per_turn_retrieved": [
+    [
+      "tomato_egg_stirfry",
+      "shakshuka",
+      "frittata"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 7.250206470489502,
+  "token_usage": {
+    "input": 489,
+    "output": 659
+  }
+}

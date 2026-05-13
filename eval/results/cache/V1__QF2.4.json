@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF2.4",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_filter",
+  "gold_recipe_ids": [
+    "tonkatsu"
+  ],
+  "answer": "Based on the provided context, the Japanese dish with a golden, crispy fried coating is **Tonkatsu**. It is described as a \"thick golden-brown crumbed pork cutlet\" with a \"craggy panko crust.\"",
+  "per_turn_responses": [
+    "Based on the provided context, the Japanese dish with a golden, crispy fried coating is **Tonkatsu**. It is described as a \"thick golden-brown crumbed pork cutlet\" with a \"craggy panko crust.\""
+  ],
+  "retrieved_recipe_ids": [
+    "tempura",
+    "tonkatsu",
+    "fried_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "tempura",
+      "tonkatsu",
+      "fried_chicken"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.4777870178222656,
+  "token_usage": {
+    "input": 480,
+    "output": 211
+  }
+}

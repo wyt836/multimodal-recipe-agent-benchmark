@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF2.3",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "pesto_pasta"
+  ],
+  "answer": "I don't know which specific recipe you're referring to. Many dishes use a bright green herb garnish (e.g., parsley, cilantro, chives, basil) on top. Could you describe the dish or name it?",
+  "per_turn_responses": [
+    "I don't know which specific recipe you're referring to. Many dishes use a bright green herb garnish (e.g., parsley, cilantro, chives, basil) on top. Could you describe the dish or name it?"
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 1.96504807472229,
+  "token_usage": {
+    "input": 51,
+    "output": 153
+  }
+}

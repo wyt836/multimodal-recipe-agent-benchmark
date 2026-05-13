@@ -1,0 +1,33 @@
+{
+  "system": "V2",
+  "query_id": "QF2.1",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "The recipe whose image shows tofu cubes floating in broth is **Miso Soup**. Its caption describes \"a black lacquered bowl of light golden-brown miso soup containing soft white tofu cubes... floating on top.\"",
+  "per_turn_responses": [
+    "The recipe whose image shows tofu cubes floating in broth is **Miso Soup**. Its caption describes \"a black lacquered bowl of light golden-brown miso soup containing soft white tofu cubes... floating on top.\""
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "mapo_tofu",
+    "chicken_curry",
+    "curry_udon"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "mapo_tofu",
+      "chicken_curry",
+      "curry_udon"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.446403741836548,
+  "token_usage": {
+    "input": 609,
+    "output": 149
+  }
+}

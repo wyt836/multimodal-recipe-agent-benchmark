@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF3.2",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "avocado_toast"
+  ],
+  "answer": "I don't have access to your specific list of recipes. If you share your vegetarian recipes, I can compare their preparation times and tell you which is shortest.",
+  "per_turn_responses": [
+    "I don't have access to your specific list of recipes. If you share your vegetarian recipes, I can compare their preparation times and tell you which is shortest."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 1.9959914684295654,
+  "token_usage": {
+    "input": 52,
+    "output": 149
+  }
+}

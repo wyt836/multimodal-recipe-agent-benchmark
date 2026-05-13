@@ -1,0 +1,85 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF1.4",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "beef_wellington"
+  ],
+  "answer": "I don't have information about the difficulty level of Beef Wellington in my knowledge base. The recipe data does not include a difficulty rating.",
+  "per_turn_responses": [
+    "I don't have information about the difficulty level of Beef Wellington in my knowledge base. The recipe data does not include a difficulty rating."
+  ],
+  "retrieved_recipe_ids": [
+    "beef_wellington",
+    "lasagna",
+    "char_siu_pork",
+    "avocado_toast",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "beef_wellington",
+      "lasagna",
+      "char_siu_pork",
+      "avocado_toast",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "beef wellington difficulty level",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "beef_wellington",
+            "score": 0.7794352769851685,
+            "name": "Beef Wellington"
+          },
+          {
+            "recipe_id": "lasagna",
+            "score": 0.44225186109542847,
+            "name": "Classic Beef Lasagna"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.36682265996932983,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.3551452159881592,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.34415537118911743,
+            "name": "Tonkatsu"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "beef_wellington"
+        },
+        "result_summary": {
+          "id": "beef_wellington",
+          "name": "Beef Wellington",
+          "cuisine": "British",
+          "prep_time_min": 60,
+          "cooking_time_min": 60
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 11.589028358459473,
+  "token_usage": {
+    "input": 4196,
+    "output": 637
+  }
+}

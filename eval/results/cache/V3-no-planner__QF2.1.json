@@ -1,0 +1,136 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF2.1",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "Miso Soup (id=miso_soup) – the image shows soft white tofu cubes floating in a light golden-brown broth.",
+  "per_turn_responses": [
+    "Miso Soup (id=miso_soup) – the image shows soft white tofu cubes floating in a light golden-brown broth."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "mapo_tofu",
+    "curry_udon",
+    "massaman_curry",
+    "kung_pao_chicken",
+    "chicken_curry",
+    "tom_yum_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "mapo_tofu",
+      "curry_udon",
+      "massaman_curry",
+      "kung_pao_chicken",
+      "chicken_curry",
+      "tom_yum_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_image_visual",
+        "args": {
+          "query": "tofu cubes floating in broth",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.3176596760749817,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "mapo_tofu",
+            "score": 0.311336874961853,
+            "name": "Mapo Tofu"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.24114978313446045,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "massaman_curry",
+            "score": 0.1987675428390503,
+            "name": "Massaman Beef Curry"
+          },
+          {
+            "recipe_id": "kung_pao_chicken",
+            "score": 0.19018590450286865,
+            "name": "Kung Pao Chicken"
+          }
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "tofu cubes in broth soup",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.662528395652771,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "mapo_tofu",
+            "score": 0.5917760729789734,
+            "name": "Mapo Tofu"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.501741349697113,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.4646106958389282,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "tom_yum_soup",
+            "score": 0.45511341094970703,
+            "name": "Tom Yum Goong"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "miso_soup"
+        },
+        "result_summary": {
+          "id": "miso_soup",
+          "name": "Miso Soup",
+          "cuisine": "Japanese",
+          "prep_time_min": 5,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "mapo_tofu"
+        },
+        "result_summary": {
+          "id": "mapo_tofu",
+          "name": "Mapo Tofu",
+          "cuisine": "Sichuan",
+          "prep_time_min": 10,
+          "cooking_time_min": 15
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 17.287347078323364,
+  "token_usage": {
+    "input": 7148,
+    "output": 1270
+  }
+}

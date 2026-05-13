@@ -1,0 +1,35 @@
+{
+  "system": "V2",
+  "query_id": "QF3.2",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "avocado_toast"
+  ],
+  "answer": "Among your vegetarian recipes, **Avocado Toast** has the shortest preparation time at just **2 minutes** of active prep (3 minutes cook, 5 minutes total). The other vegetarian options require more prep: Tomato and Egg Stir-fry (3 min), Miso Soup (5 min), and Pesto Pasta (10 min).",
+  "per_turn_responses": [
+    "Among your vegetarian recipes, **Avocado Toast** has the shortest preparation time at just **2 minutes** of active prep (3 minutes cook, 5 minutes total). The other vegetarian options require more prep: Tomato and Egg Stir-fry (3 min), Miso Soup (5 min), and Pesto Pasta (10 min)."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "tomato_egg_stirfry",
+    "miso_soup",
+    "pesto_pasta",
+    "fried_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "tomato_egg_stirfry",
+      "miso_soup",
+      "pesto_pasta",
+      "fried_chicken"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 3.343153476715088,
+  "token_usage": {
+    "input": 733,
+    "output": 296
+  }
+}

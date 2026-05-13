@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF1.1",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "Miso soup itself cooks very quickly — usually about 10–15 minutes total. The dashi broth takes around 10 minutes to prepare, then you dissolve the miso and add any solid ingredients (like tofu, wakame, or green onions) in the last 1–2 minutes without boiling. So from start to finish, about 15–20 minutes.",
+  "per_turn_responses": [
+    "Miso soup itself cooks very quickly — usually about 10–15 minutes total. The dashi broth takes around 10 minutes to prepare, then you dissolve the miso and add any solid ingredients (like tofu, wakame, or green onions) in the last 1–2 minutes without boiling. So from start to finish, about 15–20 minutes."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.185326099395752,
+  "token_usage": {
+    "input": 51,
+    "output": 141
+  }
+}

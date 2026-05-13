@@ -1,0 +1,158 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF3.1",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "answer": "Based on the ingredients you have (eggs, tomatoes, onions), you can make:\n\n- **Tomato and Egg Stir-fry** (8 minutes total) – fastest option\n- **Tomato Onion Frittata** (40 minutes total)\n- **Shakshuka** (30 minutes total)\n\nThe quickest is the **Tomato and Egg Stir-fry** (id: tomato_egg_stirfry), ready in just 8 minutes. It's a simple Chinese-style scramble that uses all three of your ingredients.",
+  "per_turn_responses": [
+    "Based on the ingredients you have (eggs, tomatoes, onions), you can make:\n\n- **Tomato and Egg Stir-fry** (8 minutes total) – fastest option\n- **Tomato Onion Frittata** (40 minutes total)\n- **Shakshuka** (30 minutes total)\n\nThe quickest is the **Tomato and Egg Stir-fry** (id: tomato_egg_stirfry), ready in just 8 minutes. It's a simple Chinese-style scramble that uses all three of your ingredients."
+  ],
+  "retrieved_recipe_ids": [
+    "tomato_egg_stirfry",
+    "frittata",
+    "shakshuka",
+    "chicken_curry",
+    "fried_chicken",
+    "avocado_toast",
+    "lasagna",
+    "pad_thai",
+    "curry_udon",
+    "tom_yum_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "tomato_egg_stirfry",
+      "frittata",
+      "shakshuka",
+      "chicken_curry",
+      "fried_chicken",
+      "avocado_toast",
+      "lasagna",
+      "pad_thai",
+      "curry_udon",
+      "tom_yum_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "eggs tomatoes onions recipe",
+          "k": 10
+        },
+        "result_summary": [
+          {
+            "recipe_id": "tomato_egg_stirfry",
+            "score": 0.6703557372093201,
+            "name": "Tomato and Egg Stir-fry"
+          },
+          {
+            "recipe_id": "frittata",
+            "score": 0.6004534959793091,
+            "name": "Tomato Onion Frittata"
+          },
+          {
+            "recipe_id": "shakshuka",
+            "score": 0.5472526550292969,
+            "name": "Shakshuka"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.4837707281112671,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.4576761722564697,
+            "name": "Southern Fried Chicken"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tomato_egg_stirfry"
+        },
+        "result_summary": {
+          "id": "tomato_egg_stirfry",
+          "name": "Tomato and Egg Stir-fry",
+          "cuisine": "Chinese",
+          "prep_time_min": 3,
+          "cooking_time_min": 5
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "frittata"
+        },
+        "result_summary": {
+          "id": "frittata",
+          "name": "Tomato Onion Frittata",
+          "cuisine": "Italian",
+          "prep_time_min": 5,
+          "cooking_time_min": 35
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "shakshuka"
+        },
+        "result_summary": {
+          "id": "shakshuka",
+          "name": "Shakshuka",
+          "cuisine": "Middle Eastern",
+          "prep_time_min": 5,
+          "cooking_time_min": 25
+        }
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "k": 5,
+          "query": "recipe with eggs tomatoes onions only few ingredients"
+        },
+        "result_summary": [
+          {
+            "recipe_id": "tomato_egg_stirfry",
+            "score": 0.6773573160171509,
+            "name": "Tomato and Egg Stir-fry"
+          },
+          {
+            "recipe_id": "frittata",
+            "score": 0.5934808850288391,
+            "name": "Tomato Onion Frittata"
+          },
+          {
+            "recipe_id": "shakshuka",
+            "score": 0.5633114576339722,
+            "name": "Shakshuka"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.521990180015564,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.49293625354766846,
+            "name": "Southern Fried Chicken"
+          }
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 29.13036823272705,
+  "token_usage": {
+    "input": 9338,
+    "output": 2236
+  }
+}

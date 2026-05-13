@@ -1,0 +1,22 @@
+{
+  "system": "V0",
+  "query_id": "QF4.1",
+  "family": "conversational",
+  "subtype": "memory_dietary_allergen",
+  "gold_recipe_ids": [
+    "tom_yum_soup"
+  ],
+  "answer": "I’m happy to help, but I need a bit more context! You mentioned “quicker than that” — could you remind me what recipe or step you’re referring to? Then I can suggest a faster alternative.",
+  "per_turn_responses": [
+    "Got it, I'll keep that in mind. If you ask about any recipes, I'll make sure they're peanut-free or suggest suitable alternatives.",
+    "I'd recommend **Pad Thai** – it's a classic stir-fried noodle dish with a perfect balance of sweet, sour, and savory flavors. It's widely available and a great introduction to Thai cuisine. If you want something with rich, creamy heat, try **Green Curry**. Both are delicious and approachable for beginners.",
+    "I’m happy to help, but I need a bit more context! You mentioned “quicker than that” — could you remind me what recipe or step you’re referring to? Then I can suggest a faster alternative."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 6.328932762145996,
+  "token_usage": {
+    "input": 145,
+    "output": 408
+  }
+}

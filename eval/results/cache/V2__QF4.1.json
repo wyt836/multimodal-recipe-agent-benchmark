@@ -1,0 +1,50 @@
+{
+  "system": "V2",
+  "query_id": "QF4.1",
+  "family": "conversational",
+  "subtype": "memory_dietary_allergen",
+  "gold_recipe_ids": [
+    "tom_yum_soup"
+  ],
+  "answer": "The context does not specify what \"that\" refers to, so I cannot directly compare. However, among the recipes listed, the fastest total time is **Avocado Toast** (5 minutes total), followed by **Miso Soup** (20 minutes total). If you are looking for a quicker option than a recipe not shown here, please clarify which dish you mean.",
+  "per_turn_responses": [
+    "Based on the recipe context, only the **Kung Pao Chicken** (id=kung_pao_chicken) contains peanuts as an allergen. You should avoid that recipe. The other recipes listed—Avocado Toast, Indian Chicken Curry, Tomato and Egg Stir-fry, and Southern Fried Chicken—do not include peanuts as an ingredient or allergen.",
+    "Based on the recipe context, here are some excellent Thai dishes you can try:\n\n- **Pad Thai** – A classic stir-fried rice noodle dish with shrimp, scrambled egg, bean sprouts, and crushed peanuts, served with lime. It's low in spice, dairy-free, and takes only 30 minutes total. The caption describes it as \"glossy amber-yellow stir-fried rice noodles\" with a generous peanut topping.\n\n- **Massaman Beef Curry** – A rich, mildly spicy curry with tender beef, potatoes, and roasted peanuts in a coconut milk sauce. It's dairy-free and gluten-free, requiring about 110 minutes total. The caption notes its \"deep golden-brown\" appearance with whole peanuts and a glossy sauce.\n\n- **Tom Yum Goong** – A fragrant, medium-spicy Thai soup with shrimp, lemongrass, kaffir lime leaves, mushrooms, and tomatoes. It's quick (25 minutes total) and both dairy-free and gluten-free. The caption describes it as a \"clear deep-orange spicy Thai soup\" with fresh herbs and chili.\n\nAny of these would be a great choice—pick based on your preferred protein, spice level, and time available!",
+    "The context does not specify what \"that\" refers to, so I cannot directly compare. However, among the recipes listed, the fastest total time is **Avocado Toast** (5 minutes total), followed by **Miso Soup** (20 minutes total). If you are looking for a quicker option than a recipe not shown here, please clarify which dish you mean."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "bibimbap",
+    "fried_chicken",
+    "miso_soup",
+    "lasagna"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "kung_pao_chicken",
+      "chicken_curry",
+      "tomato_egg_stirfry",
+      "fried_chicken"
+    ],
+    [
+      "pad_thai",
+      "massaman_curry",
+      "tom_yum_soup",
+      "chicken_curry"
+    ],
+    [
+      "avocado_toast",
+      "bibimbap",
+      "fried_chicken",
+      "miso_soup",
+      "lasagna"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 14.532127857208252,
+  "token_usage": {
+    "input": 2207,
+    "output": 1035
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF3.3",
+  "family": "multi_hop",
+  "subtype": "set_intersection",
+  "gold_recipe_ids": [
+    "mapo_tofu",
+    "chicken_curry"
+  ],
+  "answer": "Both **Mapo Tofu** (id=mapo_tofu) and **Indian Chicken Curry** (id=chicken_curry) use both garlic and ginger as ingredients.",
+  "per_turn_responses": [
+    "Both **Mapo Tofu** (id=mapo_tofu) and **Indian Chicken Curry** (id=chicken_curry) use both garlic and ginger as ingredients."
+  ],
+  "retrieved_recipe_ids": [
+    "mapo_tofu",
+    "chicken_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "mapo_tofu",
+      "chicken_curry"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "ingredients_required": [
+              "garlic",
+              "ginger"
+            ]
+          }
+        },
+        "result_summary": [
+          "mapo_tofu",
+          "chicken_curry"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 13.58809232711792,
+  "token_usage": {
+    "input": 1112,
+    "output": 1051
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF2.1",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "Based on the recipe data, **Miso Soup** (id=miso_soup) matches your description perfectly. Its image caption notes \"soft white tofu cubes\" floating in a light golden-brown broth.",
+  "per_turn_responses": [
+    "Based on the recipe data, **Miso Soup** (id=miso_soup) matches your description perfectly. Its image caption notes \"soft white tofu cubes\" floating in a light golden-brown broth."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "tofu cubes floating in broth",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.3176596760749817,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "mapo_tofu",
+            "score": 0.311336874961853,
+            "name": "Mapo Tofu"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.24114978313446045,
+            "name": "Curry Udon"
+          }
+        ]
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "main_protein": "tofu"
+        },
+        "result_summary": [
+          "miso_soup"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 11.19501519203186,
+  "token_usage": {
+    "input": 975,
+    "output": 883
+  }
+}

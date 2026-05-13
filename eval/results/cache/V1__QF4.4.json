@@ -1,0 +1,43 @@
+{
+  "system": "V1",
+  "query_id": "QF4.4",
+  "family": "conversational",
+  "subtype": "memory_preference_conflict",
+  "gold_recipe_ids": [
+    "char_siu_pork"
+  ],
+  "answer": "Here is a Cantonese dish from the context:\n\n**Char Siu Pork**  \n- **Cuisine:** Cantonese  \n- **Prep:** 20 min | **Cook:** 45 min | **Total:** 65 min | **Servings:** 4  \n- **Protein:** Pork  \n- **Spicy:** None  \n- **Dietary:** Dairy-free  \n- **Allergens:** Soy, Gluten  \n- **Ingredients:** Pork shoulder, hoisin sauce, honey, Chinese cooking wine, light soy sauce, dark soy sauce, five-spice powder, garlic, red yeast rice paste  \n- **Caption:** Glossy lacquered slices of red-mahogany Cantonese char siu pork with characteristic charred dark edges and a sticky honey glaze, fanned out on a white plate with a small mound of jasmine rice.",
+  "per_turn_responses": [
+    "Based on the recipe context, the least spicy options are the **Southern Fried Chicken** (spicy=low) and the **Avocado Toast** (spicy=low). The **Indian Chicken Curry** is listed as spicy=medium, so it may not be suitable for you.",
+    "Based on the recipe context, the only Sichuan dish available is **Kung Pao Chicken**.",
+    "Here is a Cantonese dish from the context:\n\n**Char Siu Pork**  \n- **Cuisine:** Cantonese  \n- **Prep:** 20 min | **Cook:** 45 min | **Total:** 65 min | **Servings:** 4  \n- **Protein:** Pork  \n- **Spicy:** None  \n- **Dietary:** Dairy-free  \n- **Allergens:** Soy, Gluten  \n- **Ingredients:** Pork shoulder, hoisin sauce, honey, Chinese cooking wine, light soy sauce, dark soy sauce, five-spice powder, garlic, red yeast rice paste  \n- **Caption:** Glossy lacquered slices of red-mahogany Cantonese char siu pork with characteristic charred dark edges and a sticky honey glaze, fanned out on a white plate with a small mound of jasmine rice."
+  ],
+  "retrieved_recipe_ids": [
+    "char_siu_pork",
+    "miso_soup",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "chicken_curry",
+      "fried_chicken",
+      "avocado_toast"
+    ],
+    [
+      "char_siu_pork",
+      "kung_pao_chicken",
+      "miso_soup"
+    ],
+    [
+      "char_siu_pork",
+      "miso_soup",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 7.500192165374756,
+  "token_usage": {
+    "input": 1368,
+    "output": 580
+  }
+}

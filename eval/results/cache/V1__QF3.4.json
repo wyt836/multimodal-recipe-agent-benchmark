@@ -1,0 +1,35 @@
+{
+  "system": "V1",
+  "query_id": "QF3.4",
+  "family": "multi_hop",
+  "subtype": "multi_constraint_filter",
+  "gold_recipe_ids": [
+    "miso_soup",
+    "tonkatsu",
+    "curry_udon",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "answer": "Based on the provided recipe context, only one recipe has a total time under 25 minutes: **Avocado Toast** (total=5 minutes). The other two recipes—Southern Fried Chicken (40 minutes) and Indian Chicken Curry (55 minutes)—exceed 25 minutes. Therefore, I cannot provide 3 recipes that meet your criteria.",
+  "per_turn_responses": [
+    "Based on the provided recipe context, only one recipe has a total time under 25 minutes: **Avocado Toast** (total=5 minutes). The other two recipes—Southern Fried Chicken (40 minutes) and Indian Chicken Curry (55 minutes)—exceed 25 minutes. Therefore, I cannot provide 3 recipes that meet your criteria."
+  ],
+  "retrieved_recipe_ids": [
+    "fried_chicken",
+    "chicken_curry",
+    "avocado_toast"
+  ],
+  "per_turn_retrieved": [
+    [
+      "fried_chicken",
+      "chicken_curry",
+      "avocado_toast"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.0745770931243896,
+  "token_usage": {
+    "input": 456,
+    "output": 176
+  }
+}

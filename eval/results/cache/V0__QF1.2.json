@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF1.2",
+  "family": "factual",
+  "subtype": "in_kb_ingredient_list",
+  "gold_recipe_ids": [
+    "mapo_tofu"
+  ],
+  "answer": "For mapo tofu, you'll need:\n\n- Soft or silken tofu (about 300–400g)\n- Ground pork (or beef, ~100g)\n- Doubanjiang (fermented broad bean paste)\n- Fermented black beans (douchi)\n- Garlic (minced)\n- Ginger (minced)\n- Scallions (sliced, green parts)\n- Sichuan peppercorns (whole or ground)\n- Chili oil or dried chilies (adjust to taste)\n- Soy sauce\n- Cornstarch (for slurry)\n- Vegetable oil\n- Water or chicken stock\n- Optional: sugar, sesame oil, MSG",
+  "per_turn_responses": [
+    "For mapo tofu, you'll need:\n\n- Soft or silken tofu (about 300–400g)\n- Ground pork (or beef, ~100g)\n- Doubanjiang (fermented broad bean paste)\n- Fermented black beans (douchi)\n- Garlic (minced)\n- Ginger (minced)\n- Scallions (sliced, green parts)\n- Sichuan peppercorns (whole or ground)\n- Chili oil or dried chilies (adjust to taste)\n- Soy sauce\n- Cornstarch (for slurry)\n- Vegetable oil\n- Water or chicken stock\n- Optional: sugar, sesame oil, MSG"
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.835578680038452,
+  "token_usage": {
+    "input": 50,
+    "output": 230
+  }
+}

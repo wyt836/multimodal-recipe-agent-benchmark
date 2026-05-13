@@ -1,0 +1,19 @@
+{
+  "system": "V0",
+  "query_id": "QF4.5",
+  "family": "conversational",
+  "subtype": "memory_constraint_override",
+  "gold_recipe_ids": [],
+  "answer": "I'd be happy to help make a vegetarian version! Could you please remind me what dish or recipe you're referring to? That way I can suggest the right substitutions and adjustments.",
+  "per_turn_responses": [
+    "Here are a few simple chicken dishes you can make tonight with common ingredients:\n\n1. **Pan-Seared Chicken Breast** – Season with salt, pepper, and herbs; cook in a hot pan with oil until golden and cooked through. Serve with a quick pan sauce (butter, lemon, garlic).\n\n2. **One-Pan Lemon Herb Chicken & Veggies** – Toss chicken thighs with olive oil, lemon juice, garlic, and herbs; roast on a sheet pan alongside chopped vegetables (broccoli, carrots, potatoes) at 400°F for ~30 min.\n\n3. **Chicken Stir-Fry** – Slice chicken breast, stir-fry in a hot wok with oil, then add mixed vegetables and a simple sauce (soy sauce, ginger, garlic). Serve over rice.\n\n4. **Creamy Garlic Chicken** – Brown chicken thighs, then simmer in a sauce of heavy cream, garlic, and Parmesan. Add spinach for extra greens.\n\n5. **Chicken Tacos** – Shred or dice cooked chicken, season with cumin, chili powder, and lime; serve in tortillas with salsa, avocado, and cilantro.\n\nPick the one that suits your pantry and time. If you need exact measurements or steps, let me know!",
+    "I'd be happy to help make a vegetarian version! Could you please remind me what dish or recipe you're referring to? That way I can suggest the right substitutions and adjustments."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 6.768559694290161,
+  "token_usage": {
+    "input": 99,
+    "output": 409
+  }
+}

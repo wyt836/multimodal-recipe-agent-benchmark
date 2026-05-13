@@ -1,0 +1,289 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF3.5",
+  "family": "multi_hop",
+  "subtype": "aggregate_computation",
+  "gold_recipe_ids": [],
+  "answer": "The average cooking time for your Asian recipes is 28 minutes.",
+  "per_turn_responses": [
+    "The average cooking time for your Asian recipes is 28 minutes."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "char_siu_pork",
+    "chicken_curry",
+    "pad_thai",
+    "avocado_toast",
+    "fried_chicken",
+    "tomato_egg_stirfry",
+    "massaman_curry",
+    "tempura",
+    "tonkatsu",
+    "bibimbap"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "char_siu_pork",
+      "chicken_curry",
+      "pad_thai",
+      "avocado_toast",
+      "fried_chicken",
+      "tomato_egg_stirfry",
+      "massaman_curry",
+      "tempura",
+      "tonkatsu",
+      "bibimbap"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "Asian recipes",
+          "k": 10
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5447723269462585,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.5354415774345398,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.5088469386100769,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.4981551170349121,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.49017733335494995,
+            "name": "Avocado Toast"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "k": 10,
+          "query": "Asian cuisine recipes"
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5347196459770203,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.5275270938873291,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.5231541395187378,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.4966137409210205,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.48972004652023315,
+            "name": "Southern Fried Chicken"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "k": 10,
+          "query": "Chinese Japanese Korean Thai Vietnamese recipes"
+        },
+        "result_summary": [
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.5371509790420532,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5267508029937744,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.4894428253173828,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.45733213424682617,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.4499754309654236,
+            "name": "Southern Fried Chicken"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "miso_soup"
+        },
+        "result_summary": {
+          "id": "miso_soup",
+          "name": "Miso Soup",
+          "cuisine": "Japanese",
+          "prep_time_min": 5,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "char_siu_pork"
+        },
+        "result_summary": {
+          "id": "char_siu_pork",
+          "name": "Char Siu Pork",
+          "cuisine": "Cantonese",
+          "prep_time_min": 20,
+          "cooking_time_min": 45
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "chicken_curry"
+        },
+        "result_summary": {
+          "id": "chicken_curry",
+          "name": "Indian Chicken Curry",
+          "cuisine": "Indian",
+          "prep_time_min": 15,
+          "cooking_time_min": 40
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "pad_thai"
+        },
+        "result_summary": {
+          "id": "pad_thai",
+          "name": "Pad Thai",
+          "cuisine": "Thai",
+          "prep_time_min": 15,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tomato_egg_stirfry"
+        },
+        "result_summary": {
+          "id": "tomato_egg_stirfry",
+          "name": "Tomato and Egg Stir-fry",
+          "cuisine": "Chinese",
+          "prep_time_min": 3,
+          "cooking_time_min": 5
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "massaman_curry"
+        },
+        "result_summary": {
+          "id": "massaman_curry",
+          "name": "Massaman Beef Curry",
+          "cuisine": "Thai",
+          "prep_time_min": 20,
+          "cooking_time_min": 90
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tempura"
+        },
+        "result_summary": {
+          "id": "tempura",
+          "name": "Tempura",
+          "cuisine": "Japanese",
+          "prep_time_min": 15,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "tonkatsu"
+        },
+        "result_summary": {
+          "id": "tonkatsu",
+          "name": "Tonkatsu",
+          "cuisine": "Japanese",
+          "prep_time_min": 10,
+          "cooking_time_min": 12
+        }
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "bibimbap"
+        },
+        "result_summary": {
+          "id": "bibimbap",
+          "name": "Vegetable Bibimbap",
+          "cuisine": "Korean",
+          "prep_time_min": 15,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "compute_aggregate",
+        "args": {
+          "recipe_ids": [
+            "miso_soup",
+            "char_siu_pork",
+            "chicken_curry",
+            "pad_thai",
+            "tomato_egg_stirfry",
+            "massaman_curry",
+            "tempura",
+            "tonkatsu",
+            "bibimbap"
+          ],
+          "op": "mean",
+          "field": "cooking_time_min"
+        },
+        "result_summary": 28.0
+      }
+    ]
+  ],
+  "latency_seconds": 29.574613571166992,
+  "token_usage": {
+    "input": 21572,
+    "output": 2131
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "system": "V2",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "Based on the recipe context, the best match is **Curry Udon** (Japanese). It features thick udon noodles in a mustard-yellow curry broth, and since it's Japanese cuisine, it meets your requirement of not being Thai. You can find it in the recipe list under `curry_udon`.",
+  "per_turn_responses": [
+    "Based on the recipe context, the best match is **Curry Udon** (Japanese). It features thick udon noodles in a mustard-yellow curry broth, and since it's Japanese cuisine, it meets your requirement of not being Thai. You can find it in the recipe list under `curry_udon`."
+  ],
+  "retrieved_recipe_ids": [
+    "pad_thai",
+    "curry_udon",
+    "chicken_curry",
+    "massaman_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "pad_thai",
+      "curry_udon",
+      "chicken_curry",
+      "massaman_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 3.306478977203369,
+  "token_usage": {
+    "input": 639,
+    "output": 188
+  }
+}

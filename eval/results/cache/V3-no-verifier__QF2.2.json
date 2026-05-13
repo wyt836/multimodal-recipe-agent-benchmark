@@ -1,0 +1,59 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF2.2",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "lasagna"
+  ],
+  "answer": "The recipe with a layered, stacked presentation in its image is **Classic Beef Lasagna** (id=lasagna). Its caption explicitly describes \"four distinct stacked layers\" of ragù, pasta, béchamel, and cheese.",
+  "per_turn_responses": [
+    "The recipe with a layered, stacked presentation in its image is **Classic Beef Lasagna** (id=lasagna). Its caption explicitly describes \"four distinct stacked layers\" of ragù, pasta, béchamel, and cheese."
+  ],
+  "retrieved_recipe_ids": [
+    "lasagna",
+    "char_siu_pork",
+    "fried_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "lasagna",
+      "char_siu_pork",
+      "fried_chicken"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "layered stacked presentation",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "lasagna",
+            "score": 0.21641123294830322,
+            "name": "Classic Beef Lasagna"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.14772868156433105,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.14370030164718628,
+            "name": "Southern Fried Chicken"
+          }
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 13.478518724441528,
+  "token_usage": {
+    "input": 1350,
+    "output": 1006
+  }
+}

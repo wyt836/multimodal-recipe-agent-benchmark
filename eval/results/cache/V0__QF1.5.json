@@ -1,0 +1,18 @@
+{
+  "system": "V0",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "Here's a basic method for making sushi rolls (maki):\n\n1. **Prepare sushi rice**: Cook short-grain rice, then season with a mixture of rice vinegar, sugar, and salt. Cool to room temperature.\n2. **Prep fillings**: Slice your chosen ingredients (e.g., cucumber, avocado, cooked shrimp, smoked salmon, crab stick) into thin strips.\n3. **Set up**: Place a sheet of nori (seaweed) shiny side down on a bamboo rolling mat.\n4. **Spread rice**: Wet your hands to prevent sticking, then spread an even layer of rice over the nori, leaving a 1-inch strip at the top edge.\n5. **Add fillings**: Lay your fillings in a line across the rice, about an inch from the bottom edge.\n6. **Roll**: Lift the mat’s bottom edge and roll it away from you, tucking the fillings tightly. Continue rolling until you reach the bare nori strip; moisten that strip with water to seal.\n7. **Slice**: Use a sharp, wet knife to cut the roll into bite-sized pieces.\n\nServe with soy sauce, pickled ginger, and wasabi. Practice makes perfect!",
+  "per_turn_responses": [
+    "Here's a basic method for making sushi rolls (maki):\n\n1. **Prepare sushi rice**: Cook short-grain rice, then season with a mixture of rice vinegar, sugar, and salt. Cool to room temperature.\n2. **Prep fillings**: Slice your chosen ingredients (e.g., cucumber, avocado, cooked shrimp, smoked salmon, crab stick) into thin strips.\n3. **Set up**: Place a sheet of nori (seaweed) shiny side down on a bamboo rolling mat.\n4. **Spread rice**: Wet your hands to prevent sticking, then spread an even layer of rice over the nori, leaving a 1-inch strip at the top edge.\n5. **Add fillings**: Lay your fillings in a line across the rice, about an inch from the bottom edge.\n6. **Roll**: Lift the mat’s bottom edge and roll it away from you, tucking the fillings tightly. Continue rolling until you reach the bare nori strip; moisten that strip with water to seal.\n7. **Slice**: Use a sharp, wet knife to cut the roll into bite-sized pieces.\n\nServe with soy sauce, pickled ginger, and wasabi. Practice makes perfect!"
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 3.629361391067505,
+  "token_usage": {
+    "input": 47,
+    "output": 286
+  }
+}

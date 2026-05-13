@@ -1,0 +1,85 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF1.1",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "The miso soup takes 15 minutes to cook.",
+  "per_turn_responses": [
+    "The miso soup takes 15 minutes to cook."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "curry_udon",
+    "tom_yum_soup",
+    "char_siu_pork",
+    "avocado_toast"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "curry_udon",
+      "tom_yum_soup",
+      "char_siu_pork",
+      "avocado_toast"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "miso soup cooking time",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.7664499878883362,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.46008580923080444,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "tom_yum_soup",
+            "score": 0.4426720142364502,
+            "name": "Tom Yum Goong"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.43336838483810425,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.4255596399307251,
+            "name": "Avocado Toast"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "miso_soup"
+        },
+        "result_summary": {
+          "id": "miso_soup",
+          "name": "Miso Soup",
+          "cuisine": "Japanese",
+          "prep_time_min": 5,
+          "cooking_time_min": 15
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 19.24940323829651,
+  "token_usage": {
+    "input": 4091,
+    "output": 1045
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "Based on your request for a yellow noodle dish that’s not Thai, I recommend **Curry Udon** (id=curry_udon). It’s Japanese, with a rich mustard-yellow curry broth served over thick udon noodles, and is dairy-free.",
+  "per_turn_responses": [
+    "Based on your request for a yellow noodle dish that’s not Thai, I recommend **Curry Udon** (id=curry_udon). It’s Japanese, with a rich mustard-yellow curry broth served over thick udon noodles, and is dairy-free."
+  ],
+  "retrieved_recipe_ids": [
+    "curry_udon",
+    "pad_thai",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "curry_udon",
+      "pad_thai",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "yellow noodle dish",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.30176031589508057,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.27288419008255005,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.22630727291107178,
+            "name": "Tonkatsu"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0]"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[1]"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 4,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[2]"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 21.675107955932617,
+  "token_usage": {
+    "input": 1335,
+    "output": 2032
+  }
+}

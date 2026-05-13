@@ -1,0 +1,51 @@
+{
+  "system": "V2",
+  "query_id": "QF4.2",
+  "family": "conversational",
+  "subtype": "memory_accumulating_constraints",
+  "gold_recipe_ids": [
+    "bibimbap"
+  ],
+  "answer": "Based on the visual descriptions, **Shakshuka** looks the most colorful. Its caption mentions a \"deep-red spiced tomato sauce\" dotted with red bell pepper, \"vivid orange runny yolks,\" crumbled white feta, and \"bright green parsley\" – offering a wide range of vivid colors. Tom Yum Goong also has a colorful broth with deep orange, pink, red, and green, but Shakshuka’s contrast of red, orange, white, and green is more striking.",
+  "per_turn_responses": [
+    "Based on the recipe context, here are three vegetarian options that fit within your 30-minute timeframe:\n\n1. **Avocado Toast** (total time: 5 min) – vegetarian, vegan, dairy-free.  \n2. **Tomato and Egg Stir-fry** (total time: 8 min) – vegetarian, dairy-free, gluten-free.  \n3. **Shakshuka** (total time: 30 min) – vegetarian, gluten-free (contains egg and dairy via feta).\n\nAll three are within your time limit. The first two are very quick, while Shakshuka uses the full 30 minutes. Choose based on your preference and available ingredients.",
+    "Based on the recipe context, you can make the following dishes:\n\n- **Avocado Toast** (Modern Western, 5 minutes total)\n- **Southern Fried Chicken** (American, 40 minutes total)\n- **Indian Chicken Curry** (Indian, 55 minutes total)\n- **Mapo Tofu** (Sichuan, 25 minutes total)\n- **Miso Soup** (Japanese, 20 minutes total)\n\nEach recipe includes a description, ingredients, and preparation time. If you need more details about a specific one, feel free to ask!",
+    "Based on the visual descriptions, **Shakshuka** looks the most colorful. Its caption mentions a \"deep-red spiced tomato sauce\" dotted with red bell pepper, \"vivid orange runny yolks,\" crumbled white feta, and \"bright green parsley\" – offering a wide range of vivid colors. Tom Yum Goong also has a colorful broth with deep orange, pink, red, and green, but Shakshuka’s contrast of red, orange, white, and green is more striking."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "tom_yum_soup",
+    "fried_chicken",
+    "shakshuka",
+    "chicken_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "tomato_egg_stirfry",
+      "chicken_curry",
+      "mapo_tofu",
+      "shakshuka"
+    ],
+    [
+      "avocado_toast",
+      "fried_chicken",
+      "chicken_curry",
+      "mapo_tofu",
+      "miso_soup"
+    ],
+    [
+      "avocado_toast",
+      "tom_yum_soup",
+      "fried_chicken",
+      "shakshuka",
+      "chicken_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 11.980235576629639,
+  "token_usage": {
+    "input": 2267,
+    "output": 993
+  }
+}

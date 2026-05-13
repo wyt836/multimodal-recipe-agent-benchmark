@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF3.2",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "avocado_toast"
+  ],
+  "answer": "Among your vegetarian recipes, **Avocado Toast** (id=avocado_toast) has the shortest preparation time at 2 minutes.",
+  "per_turn_responses": [
+    "Among your vegetarian recipes, **Avocado Toast** (id=avocado_toast) has the shortest preparation time at 2 minutes."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "miso_soup",
+    "fried_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "miso_soup",
+      "fried_chicken"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.7240183353424072,
+  "token_usage": {
+    "input": 444,
+    "output": 85
+  }
+}

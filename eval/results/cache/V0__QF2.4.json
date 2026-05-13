@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF2.4",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_filter",
+  "gold_recipe_ids": [
+    "tonkatsu"
+  ],
+  "answer": "Tonkatsu (breaded and deep-fried pork cutlet) is the classic Japanese dish with a golden, crispy panko coating.",
+  "per_turn_responses": [
+    "Tonkatsu (breaded and deep-fried pork cutlet) is the classic Japanese dish with a golden, crispy panko coating."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.487562417984009,
+  "token_usage": {
+    "input": 52,
+    "output": 148
+  }
+}

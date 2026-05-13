@@ -1,0 +1,110 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF3.4",
+  "family": "multi_hop",
+  "subtype": "multi_constraint_filter",
+  "gold_recipe_ids": [
+    "miso_soup",
+    "tonkatsu",
+    "curry_udon",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "answer": "Here are 3 recipes that take under 25 minutes total and do not use any seafood:\n\n1. **Avocado Toast** (id=avocado_toast) – 5 minutes total. Simple vegan toast with mashed avocado, chili flakes, and lemon.\n2. **Tomato and Egg Stir-fry** (id=tomato_egg_stirfry) – 8 minutes total. A quick Chinese stir-fry of fluffy scrambled eggs and sweet tomatoes.\n3. **Tonkatsu** (id=tonkatsu) – 22 minutes total. Crispy breaded pork cutlet with shredded cabbage and tonkatsu sauce.\n\nIf the user wants a non-pork option, **Miso Soup** (id=miso_soup, 20 min) or **Curry Udon** (id=curry_udon, 20 min) are also seafood-free.",
+  "per_turn_responses": [
+    "Here are 3 recipes that take under 25 minutes total and do not use any seafood:\n\n1. **Avocado Toast** (id=avocado_toast) – 5 minutes total. Simple vegan toast with mashed avocado, chili flakes, and lemon.\n2. **Tomato and Egg Stir-fry** (id=tomato_egg_stirfry) – 8 minutes total. A quick Chinese stir-fry of fluffy scrambled eggs and sweet tomatoes.\n3. **Tonkatsu** (id=tonkatsu) – 22 minutes total. Crispy breaded pork cutlet with shredded cabbage and tonkatsu sauce.\n\nIf the user wants a non-pork option, **Miso Soup** (id=miso_soup, 20 min) or **Curry Udon** (id=curry_udon, 20 min) are also seafood-free."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "mapo_tofu",
+    "tonkatsu",
+    "curry_udon",
+    "pesto_pasta",
+    "tomato_egg_stirfry",
+    "avocado_toast",
+    "tom_yum_soup",
+    "kung_pao_chicken"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "mapo_tofu",
+      "tonkatsu",
+      "curry_udon",
+      "pesto_pasta",
+      "tomato_egg_stirfry",
+      "avocado_toast",
+      "tom_yum_soup",
+      "kung_pao_chicken"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "criteria": {
+            "max_total_time_min": 25,
+            "ingredients_excluded": [
+              "seafood"
+            ]
+          }
+        },
+        "result_summary": [
+          "miso_soup",
+          "mapo_tofu",
+          "tonkatsu",
+          "curry_udon",
+          "pesto_pasta",
+          "..."
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0]"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[1]"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 4,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[2]"
+        },
+        "result_summary": null
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "max_total_time_min": 25,
+          "ingredients_excluded": [
+            "seafood"
+          ]
+        },
+        "result_summary": [
+          "miso_soup",
+          "mapo_tofu",
+          "tonkatsu",
+          "curry_udon",
+          "pesto_pasta"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 26.289676427841187,
+  "token_usage": {
+    "input": 2105,
+    "output": 2259
+  }
+}

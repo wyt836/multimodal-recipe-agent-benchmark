@@ -1,0 +1,22 @@
+{
+  "system": "V0",
+  "query_id": "QF3.1",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "answer": "I don't have access to your personal recipes, so I can't choose from them directly. However, with eggs, tomatoes, and onions, a common and fast option is scrambled eggs with diced tomatoes and onions—ready in about 5–10 minutes. If you'd like a recipe from my own knowledge, I can provide that.",
+  "per_turn_responses": [
+    "I don't have access to your personal recipes, so I can't choose from them directly. However, with eggs, tomatoes, and onions, a common and fast option is scrambled eggs with diced tomatoes and onions—ready in about 5–10 minutes. If you'd like a recipe from my own knowledge, I can provide that."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 4.306394815444946,
+  "token_usage": {
+    "input": 64,
+    "output": 349
+  }
+}

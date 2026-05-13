@@ -1,0 +1,85 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF2.2",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "lasagna"
+  ],
+  "answer": "The **Classic Beef Lasagna** (id=lasagna) is described as having \"four distinct stacked layers\" in its image.",
+  "per_turn_responses": [
+    "The **Classic Beef Lasagna** (id=lasagna) is described as having \"four distinct stacked layers\" in its image."
+  ],
+  "retrieved_recipe_ids": [
+    "lasagna",
+    "char_siu_pork",
+    "fried_chicken",
+    "tempura",
+    "bibimbap"
+  ],
+  "per_turn_retrieved": [
+    [
+      "lasagna",
+      "char_siu_pork",
+      "fried_chicken",
+      "tempura",
+      "bibimbap"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_image_visual",
+        "args": {
+          "query": "layered stacked presentation",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "lasagna",
+            "score": 0.21641123294830322,
+            "name": "Classic Beef Lasagna"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.14772868156433105,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.14370030164718628,
+            "name": "Southern Fried Chicken"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.13894051313400269,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "bibimbap",
+            "score": 0.12943226099014282,
+            "name": "Vegetable Bibimbap"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "lasagna"
+        },
+        "result_summary": {
+          "id": "lasagna",
+          "name": "Classic Beef Lasagna",
+          "cuisine": "Italian",
+          "prep_time_min": 30,
+          "cooking_time_min": 60
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 13.40437626838684,
+  "token_usage": {
+    "input": 4350,
+    "output": 844
+  }
+}

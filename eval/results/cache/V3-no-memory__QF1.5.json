@@ -1,0 +1,51 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "I don't have a matching recipe in my knowledge base for sushi rolls. The only verified recipe I have is for Miso Soup (id=miso_soup).",
+  "per_turn_responses": [
+    "I don't have a matching recipe in my knowledge base for sushi rolls. The only verified recipe I have is for Miso Soup (id=miso_soup)."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "sushi rolls",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5208427309989929,
+            "name": "Miso Soup"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 5.497007608413696,
+  "token_usage": {
+    "input": 960,
+    "output": 364
+  }
+}

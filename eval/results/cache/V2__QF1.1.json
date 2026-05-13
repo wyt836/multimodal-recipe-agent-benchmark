@@ -1,0 +1,33 @@
+{
+  "system": "V2",
+  "query_id": "QF1.1",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "The Miso Soup (id=miso_soup) takes **15 minutes** to cook.",
+  "per_turn_responses": [
+    "The Miso Soup (id=miso_soup) takes **15 minutes** to cook."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "curry_udon",
+    "char_siu_pork",
+    "massaman_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "curry_udon",
+      "char_siu_pork",
+      "massaman_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.6842026710510254,
+  "token_usage": {
+    "input": 638,
+    "output": 86
+  }
+}

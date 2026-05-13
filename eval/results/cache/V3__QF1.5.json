@@ -1,0 +1,57 @@
+{
+  "system": "V3",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "I don't have a matching recipe for sushi rolls in my knowledge base. The only recipe available is Miso Soup (id=miso_soup).",
+  "per_turn_responses": [
+    "I don't have a matching recipe for sushi rolls in my knowledge base. The only recipe available is Miso Soup (id=miso_soup)."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "sushi rolls",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5208427309989929,
+            "name": "Miso Soup"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": [
+            {
+              "recipe_id": "miso_soup",
+              "score": 0.5208427309989929,
+              "name": "Miso Soup"
+            }
+          ]
+        },
+        "error": "cannot use 'list' as a dict key (unhashable type: 'list')"
+      }
+    ]
+  ],
+  "latency_seconds": 12.547133684158325,
+  "token_usage": {
+    "input": 1169,
+    "output": 940
+  }
+}

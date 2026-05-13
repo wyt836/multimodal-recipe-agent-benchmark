@@ -1,0 +1,35 @@
+{
+  "system": "V2",
+  "query_id": "QF2.2",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "lasagna"
+  ],
+  "answer": "The recipe with a layered, stacked presentation in its image is **Classic Beef Lasagna**. Its caption describes \"a square slice... showing four distinct stacked layers: red meat ragù, beige pasta sheets, white béchamel, and melted golden cheese.\"",
+  "per_turn_responses": [
+    "The recipe with a layered, stacked presentation in its image is **Classic Beef Lasagna**. Its caption describes \"a square slice... showing four distinct stacked layers: red meat ragù, beige pasta sheets, white béchamel, and melted golden cheese.\""
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "lasagna",
+    "char_siu_pork",
+    "fried_chicken",
+    "shakshuka"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "lasagna",
+      "char_siu_pork",
+      "fried_chicken",
+      "shakshuka"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 2.3023102283477783,
+  "token_usage": {
+    "input": 788,
+    "output": 202
+  }
+}

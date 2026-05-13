@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF4.3",
+  "family": "conversational",
+  "subtype": "memory_negative_recall",
+  "gold_recipe_ids": [],
+  "answer": "I'm not sure what \"that one\" refers to, as I don't have any previous recipe in our conversation. Could you please mention the recipe you'd like a quicker version of? I'll be happy to help if I know it.",
+  "per_turn_responses": [
+    "That's great! Miso soup is a comforting classic. Did you have a specific question about the recipe or technique, or would you like tips on variations or leftovers?",
+    "How about Korean-inspired gochujang-glazed meatballs with quick-pickled cucumbers and sesame rice? It's savory, sweet, spicy, and refreshing—definitely different from standard weeknight fare. Serve with steamed rice and a drizzle of extra gochujang sauce.",
+    "I'm not sure what \"that one\" refers to, as I don't have any previous recipe in our conversation. Could you please mention the recipe you'd like a quicker version of? I'll be happy to help if I know it."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 6.929315805435181,
+  "token_usage": {
+    "input": 149,
+    "output": 419
+  }
+}

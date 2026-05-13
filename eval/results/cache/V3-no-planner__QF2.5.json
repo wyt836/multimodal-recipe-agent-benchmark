@@ -1,0 +1,186 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "You want a yellow noodle dish that's not Thai. The **Curry Udon** (id=curry_udon) from Japanese cuisine fits perfectly: thick udon noodles in a rich mustard-yellow curry broth.",
+  "per_turn_responses": [
+    "You want a yellow noodle dish that's not Thai. The **Curry Udon** (id=curry_udon) from Japanese cuisine fits perfectly: thick udon noodles in a rich mustard-yellow curry broth."
+  ],
+  "retrieved_recipe_ids": [
+    "curry_udon",
+    "tonkatsu",
+    "bibimbap",
+    "tomato_egg_stirfry",
+    "mapo_tofu",
+    "miso_soup",
+    "tempura",
+    "kung_pao_chicken",
+    "avocado_toast",
+    "pesto_pasta",
+    "chicken_curry",
+    "fried_chicken",
+    "lasagna"
+  ],
+  "per_turn_retrieved": [
+    [
+      "curry_udon",
+      "tonkatsu",
+      "bibimbap",
+      "tomato_egg_stirfry",
+      "mapo_tofu",
+      "miso_soup",
+      "tempura",
+      "kung_pao_chicken",
+      "avocado_toast",
+      "pesto_pasta",
+      "chicken_curry",
+      "fried_chicken",
+      "lasagna"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_image_visual",
+        "args": {
+          "query": "yellow noodle dish",
+          "k": 10
+        },
+        "result_summary": [
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.30176031589508057,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.27288419008255005,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.22630727291107178,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "bibimbap",
+            "score": 0.2203531265258789,
+            "name": "Vegetable Bibimbap"
+          },
+          {
+            "recipe_id": "massaman_curry",
+            "score": 0.2141350507736206,
+            "name": "Massaman Beef Curry"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "yellow noodle dish recipe",
+          "k": 10
+        },
+        "result_summary": [
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.5246772170066833,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.5137227773666382,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.5119864344596863,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "pesto_pasta",
+            "score": 0.5096330642700195,
+            "name": "Pesto Pasta"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.5020068883895874,
+            "name": "Indian Chicken Curry"
+          },
+          "..."
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "curry_udon"
+        },
+        "result_summary": {
+          "id": "curry_udon",
+          "name": "Curry Udon",
+          "cuisine": "Japanese",
+          "prep_time_min": 5,
+          "cooking_time_min": 15
+        }
+      },
+      {
+        "tool": "search_text_content",
+        "args": {
+          "k": 5,
+          "query": "yellow noodles curry pasta dish not thai"
+        },
+        "result_summary": [
+          {
+            "recipe_id": "pad_thai",
+            "score": 0.5921911001205444,
+            "name": "Pad Thai"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.5884531140327454,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.5738591551780701,
+            "name": "Indian Chicken Curry"
+          },
+          {
+            "recipe_id": "massaman_curry",
+            "score": 0.5473958253860474,
+            "name": "Massaman Beef Curry"
+          },
+          {
+            "recipe_id": "pesto_pasta",
+            "score": 0.5251860618591309,
+            "name": "Pesto Pasta"
+          }
+        ]
+      },
+      {
+        "tool": "verifier_filter",
+        "args": {
+          "cuisines_excluded": [
+            "Thai"
+          ]
+        },
+        "result_summary": [
+          "curry_udon",
+          "tonkatsu",
+          "bibimbap",
+          "tomato_egg_stirfry",
+          "mapo_tofu"
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 30.174806118011475,
+  "token_usage": {
+    "input": 8688,
+    "output": 2229
+  }
+}

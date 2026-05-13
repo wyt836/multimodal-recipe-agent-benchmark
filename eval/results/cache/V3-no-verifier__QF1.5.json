@@ -1,0 +1,65 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF1.5",
+  "family": "factual",
+  "subtype": "out_of_kb_hallucination_probe",
+  "gold_recipe_ids": [],
+  "answer": "I don't have a recipe for sushi rolls in my knowledge base. The available recipes are Miso Soup, Tempura, and Tonkatsu—none are sushi rolls.",
+  "per_turn_responses": [
+    "I don't have a recipe for sushi rolls in my knowledge base. The available recipes are Miso Soup, Tempura, and Tonkatsu—none are sushi rolls."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "tempura",
+    "tonkatsu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "tempura",
+      "tonkatsu"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "sushi rolls",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5208427309989929,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.5092614889144897,
+            "name": "Tempura"
+          },
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.49364811182022095,
+            "name": "Tonkatsu"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 7.057259798049927,
+  "token_usage": {
+    "input": 1318,
+    "output": 489
+  }
+}

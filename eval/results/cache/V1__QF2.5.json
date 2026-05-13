@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF2.5",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_exclusion",
+  "gold_recipe_ids": [
+    "curry_udon"
+  ],
+  "answer": "Based on the recipe context, the yellow noodle dish that is not Thai cuisine is the **Curry Udon** (Japanese). It features thick white udon noodles in a mustard-yellow Japanese curry broth.",
+  "per_turn_responses": [
+    "Based on the recipe context, the yellow noodle dish that is not Thai cuisine is the **Curry Udon** (Japanese). It features thick white udon noodles in a mustard-yellow Japanese curry broth."
+  ],
+  "retrieved_recipe_ids": [
+    "pad_thai",
+    "curry_udon",
+    "chicken_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "pad_thai",
+      "curry_udon",
+      "chicken_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.696810245513916,
+  "token_usage": {
+    "input": 456,
+    "output": 117
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "system": "V3-no-planner",
+  "query_id": "QF1.2",
+  "family": "factual",
+  "subtype": "in_kb_ingredient_list",
+  "gold_recipe_ids": [
+    "mapo_tofu"
+  ],
+  "answer": "For Mapo Tofu (id=mapo_tofu), you need: soft tofu, ground pork, doubanjiang (broad bean paste), garlic, ginger, Sichuan peppercorn, chili oil, green onion, light soy sauce, and cornstarch slurry.",
+  "per_turn_responses": [
+    "For Mapo Tofu (id=mapo_tofu), you need: soft tofu, ground pork, doubanjiang (broad bean paste), garlic, ginger, Sichuan peppercorn, chili oil, green onion, light soy sauce, and cornstarch slurry."
+  ],
+  "retrieved_recipe_ids": [
+    "mapo_tofu",
+    "miso_soup",
+    "curry_udon",
+    "char_siu_pork",
+    "massaman_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "mapo_tofu",
+      "miso_soup",
+      "curry_udon",
+      "char_siu_pork",
+      "massaman_curry"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "tool": "search_text_content",
+        "args": {
+          "query": "mapo tofu recipe ingredients",
+          "k": 5
+        },
+        "result_summary": [
+          {
+            "recipe_id": "mapo_tofu",
+            "score": 0.7666605114936829,
+            "name": "Mapo Tofu"
+          },
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.5280095934867859,
+            "name": "Miso Soup"
+          },
+          {
+            "recipe_id": "curry_udon",
+            "score": 0.5125908255577087,
+            "name": "Curry Udon"
+          },
+          {
+            "recipe_id": "char_siu_pork",
+            "score": 0.5020063519477844,
+            "name": "Char Siu Pork"
+          },
+          {
+            "recipe_id": "massaman_curry",
+            "score": 0.49685949087142944,
+            "name": "Massaman Beef Curry"
+          }
+        ]
+      },
+      {
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "mapo_tofu"
+        },
+        "result_summary": {
+          "id": "mapo_tofu",
+          "name": "Mapo Tofu",
+          "cuisine": "Sichuan",
+          "prep_time_min": 10,
+          "cooking_time_min": 15
+        }
+      }
+    ]
+  ],
+  "latency_seconds": 10.546984195709229,
+  "token_usage": {
+    "input": 4223,
+    "output": 661
+  }
+}

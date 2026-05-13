@@ -1,0 +1,36 @@
+{
+  "system": "V2",
+  "query_id": "QF3.3",
+  "family": "multi_hop",
+  "subtype": "set_intersection",
+  "gold_recipe_ids": [
+    "mapo_tofu",
+    "chicken_curry"
+  ],
+  "answer": "Based on the provided recipe context, only **Indian Chicken Curry** uses both garlic and ginger as ingredients. The other recipes either use only one of them or none at all.",
+  "per_turn_responses": [
+    "Based on the provided recipe context, only **Indian Chicken Curry** uses both garlic and ginger as ingredients. The other recipes either use only one of them or none at all."
+  ],
+  "retrieved_recipe_ids": [
+    "chicken_curry",
+    "kung_pao_chicken",
+    "fried_chicken",
+    "tomato_egg_stirfry",
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "chicken_curry",
+      "kung_pao_chicken",
+      "fried_chicken",
+      "tomato_egg_stirfry",
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 3.402034282684326,
+  "token_usage": {
+    "input": 747,
+    "output": 208
+  }
+}

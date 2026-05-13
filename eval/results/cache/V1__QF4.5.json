@@ -1,0 +1,35 @@
+{
+  "system": "V1",
+  "query_id": "QF4.5",
+  "family": "conversational",
+  "subtype": "memory_constraint_override",
+  "gold_recipe_ids": [],
+  "answer": "Based only on the provided recipe context, I cannot determine what \"it\" refers to, as no prior dish or plan was mentioned. The context lists three recipes: Avocado Toast (vegetarian, vegan), Indian Chicken Curry (not vegetarian), and Miso Soup (vegetarian, vegan). If you meant to make one of these vegetarian, Avocado Toast and Miso Soup already are; Indian Chicken Curry contains chicken and cannot be made vegetarian with the given ingredients. Please clarify which dish you want to adjust.",
+  "per_turn_responses": [
+    "Based on the recipe context, you can make **Southern Fried Chicken** (American, 40 minutes total) or **Indian Chicken Curry** (Indian, 55 minutes total) tonight.",
+    "Based only on the provided recipe context, I cannot determine what \"it\" refers to, as no prior dish or plan was mentioned. The context lists three recipes: Avocado Toast (vegetarian, vegan), Indian Chicken Curry (not vegetarian), and Miso Soup (vegetarian, vegan). If you meant to make one of these vegetarian, Avocado Toast and Miso Soup already are; Indian Chicken Curry contains chicken and cannot be made vegetarian with the given ingredients. Please clarify which dish you want to adjust."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "chicken_curry",
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "fried_chicken",
+      "chicken_curry",
+      "avocado_toast"
+    ],
+    [
+      "avocado_toast",
+      "chicken_curry",
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 6.825024127960205,
+  "token_usage": {
+    "input": 878,
+    "output": 603
+  }
+}

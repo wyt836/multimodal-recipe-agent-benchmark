@@ -1,0 +1,22 @@
+{
+  "system": "V0",
+  "query_id": "QF4.4",
+  "family": "conversational",
+  "subtype": "memory_preference_conflict",
+  "gold_recipe_ids": [
+    "char_siu_pork"
+  ],
+  "answer": "Sure! Here's a classic Cantonese dish: **Steamed Whole Fish with Ginger and Scallion**.\n\n**Ingredients:**\n- 1 whole fresh fish (e.g., sea bass or tilapia, cleaned)\n- 2 tbsp ginger, julienned\n- 3-4 scallions, sliced into thin strips\n- 2 tbsp light soy sauce\n- 1 tbsp sesame oil\n- 2 tbsp peanut or vegetable oil\n\n**Steps:**\n1. Pat fish dry, score both sides. Place on a heatproof plate. Scatter half the ginger and scallions over and inside the fish.\n2. Steam over high heat for 8–10 minutes (depending on size) until the flesh flakes easily.\n3. Carefully drain any accumulated liquid from the plate. Drizzle with soy sauce and sesame oil.\n4. Heat the peanut oil until smoking, then pour over the remaining raw ginger and scallions on top of the fish. Serve immediately.\n\nLet me know if you'd like another Cantonese dish!",
+  "per_turn_responses": [
+    "No problem! I can help you find recipes that are mild, flavorful, and completely free of heat. Let me know what kind of dish you're in the mood for (e.g., comfort food, pasta, salads, etc.), and I’ll suggest something perfect.",
+    "Here are some classic Sichuan dishes I can help with:\n\n- **Mapo Tofu** – silken tofu in a fiery, numbing chili bean sauce with minced pork.\n- **Kung Pao Chicken** – diced chicken stir-fried with peanuts, dried chilies, and Sichuan peppercorns.\n- **Dan Dan Noodles** – wheat noodles topped with minced pork, preserved vegetables, chili oil, and sesame paste.\n- **Twice-Cooked Pork** – boiled pork belly sliced and stir-fried with leeks, garlic, and fermented bean paste.\n- **Chongqing Spicy Chicken** – deep-fried chicken nuggets tossed with dried chilies, Sichuan peppercorns, and garlic.\n- **Fish-Fragrant Eggplant** (Yuxiang Qiezi) – eggplant stir-fried in a sweet-savory-spicy sauce with pickled chilies and ginger.\n- **Sichuan Boiled Fish** (Shui Zhu Yu) – tender fish fillets poached in a fiery chili broth with bean sprouts.\n- **Fuqi Feipian** – sliced beef offal and tripe in a spicy, numbing chili sauce.\n\nWould you like a recipe or details for any of these?",
+    "Sure! Here's a classic Cantonese dish: **Steamed Whole Fish with Ginger and Scallion**.\n\n**Ingredients:**\n- 1 whole fresh fish (e.g., sea bass or tilapia, cleaned)\n- 2 tbsp ginger, julienned\n- 3-4 scallions, sliced into thin strips\n- 2 tbsp light soy sauce\n- 1 tbsp sesame oil\n- 2 tbsp peanut or vegetable oil\n\n**Steps:**\n1. Pat fish dry, score both sides. Place on a heatproof plate. Scatter half the ginger and scallions over and inside the fish.\n2. Steam over high heat for 8–10 minutes (depending on size) until the flesh flakes easily.\n3. Carefully drain any accumulated liquid from the plate. Drizzle with soy sauce and sesame oil.\n4. Heat the peanut oil until smoking, then pour over the remaining raw ginger and scallions on top of the fish. Serve immediately.\n\nLet me know if you'd like another Cantonese dish!"
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 10.914140939712524,
+  "token_usage": {
+    "input": 145,
+    "output": 803
+  }
+}

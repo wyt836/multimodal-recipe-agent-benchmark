@@ -1,0 +1,20 @@
+{
+  "system": "V0",
+  "query_id": "QF1.3",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "chicken_curry"
+  ],
+  "answer": "I don't have a specific chicken curry recipe in my knowledge to provide serving details. Could you share more about the particular recipe you're referring to (e.g., a specific cuisine, ingredient list, or source)? I'll be happy to help once I have the details.",
+  "per_turn_responses": [
+    "I don't have a specific chicken curry recipe in my knowledge to provide serving details. Could you share more about the particular recipe you're referring to (e.g., a specific cuisine, ingredient list, or source)? I'll be happy to help once I have the details."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.472640037536621,
+  "token_usage": {
+    "input": 50,
+    "output": 173
+  }
+}

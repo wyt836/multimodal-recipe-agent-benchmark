@@ -1,0 +1,53 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF2.1",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "The Miso Soup (id=miso_soup) matches your description: its image shows soft white tofu cubes floating in a light golden-brown broth.",
+  "per_turn_responses": [
+    "The Miso Soup (id=miso_soup) matches your description: its image shows soft white tofu cubes floating in a light golden-brown broth."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "tofu cubes floating in broth",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "miso_soup",
+            "score": 0.3176596760749817,
+            "name": "Miso Soup"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 9.617488384246826,
+  "token_usage": {
+    "input": 1042,
+    "output": 755
+  }
+}

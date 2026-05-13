@@ -1,0 +1,21 @@
+{
+  "system": "V0",
+  "query_id": "QF3.3",
+  "family": "multi_hop",
+  "subtype": "set_intersection",
+  "gold_recipe_ids": [
+    "mapo_tofu",
+    "chicken_curry"
+  ],
+  "answer": "Many recipes combine garlic and ginger, especially in Asian and Indian cuisines. Common examples include:\n\n- Stir-fries (e.g., chicken, beef, or vegetable)\n- Curry dishes (e.g., Thai green curry, Indian butter chicken)\n- Fried rice or noodle dishes\n- Marinades for meat or tofu\n- Soups (e.g., miso, wonton, or hot and sour)\n- Dumpling or spring roll fillings\n- Sauces (e.g., teriyaki, soy-ginger)\n- Ginger-garlic paste is a staple in many Indian dishes like dal, biryani, and tikka masala.\n\nThese two aromatics are frequently paired to add depth and warmth.",
+  "per_turn_responses": [
+    "Many recipes combine garlic and ginger, especially in Asian and Indian cuisines. Common examples include:\n\n- Stir-fries (e.g., chicken, beef, or vegetable)\n- Curry dishes (e.g., Thai green curry, Indian butter chicken)\n- Fried rice or noodle dishes\n- Marinades for meat or tofu\n- Soups (e.g., miso, wonton, or hot and sour)\n- Dumpling or spring roll fillings\n- Sauces (e.g., teriyaki, soy-ginger)\n- Ginger-garlic paste is a staple in many Indian dishes like dal, biryani, and tikka masala.\n\nThese two aromatics are frequently paired to add depth and warmth."
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 3.4903993606567383,
+  "token_usage": {
+    "input": 50,
+    "output": 193
+  }
+}

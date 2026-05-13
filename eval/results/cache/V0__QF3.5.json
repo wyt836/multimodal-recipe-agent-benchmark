@@ -1,0 +1,18 @@
+{
+  "system": "V0",
+  "query_id": "QF3.5",
+  "family": "multi_hop",
+  "subtype": "aggregate_computation",
+  "gold_recipe_ids": [],
+  "answer": "I don’t have access to your personal recipe collection, so I can’t calculate an average cooking time for your Asian recipes. If you share the list of recipes and their cooking times, I’d be happy to help you find the average!",
+  "per_turn_responses": [
+    "I don’t have access to your personal recipe collection, so I can’t calculate an average cooking time for your Asian recipes. If you share the list of recipes and their cooking times, I’d be happy to help you find the average!"
+  ],
+  "retrieved_recipe_ids": [],
+  "tool_calls": [],
+  "latency_seconds": 2.928225040435791,
+  "token_usage": {
+    "input": 55,
+    "output": 252
+  }
+}

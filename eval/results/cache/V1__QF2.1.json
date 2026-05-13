@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF2.1",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "miso_soup"
+  ],
+  "answer": "Miso Soup (id=miso_soup) – its caption describes \"soft white tofu cubes\" floating in the soup.",
+  "per_turn_responses": [
+    "Miso Soup (id=miso_soup) – its caption describes \"soft white tofu cubes\" floating in the soup."
+  ],
+  "retrieved_recipe_ids": [
+    "miso_soup",
+    "mapo_tofu",
+    "chicken_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "miso_soup",
+      "mapo_tofu",
+      "chicken_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 1.9161598682403564,
+  "token_usage": {
+    "input": 440,
+    "output": 133
+  }
+}

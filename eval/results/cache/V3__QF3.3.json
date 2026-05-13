@@ -1,0 +1,38 @@
+{
+  "system": "V3",
+  "query_id": "QF3.3",
+  "family": "multi_hop",
+  "subtype": "set_intersection",
+  "gold_recipe_ids": [
+    "mapo_tofu",
+    "chicken_curry"
+  ],
+  "answer": "I don't have a matching recipe in my knowledge base.",
+  "per_turn_responses": [
+    "I don't have a matching recipe in my knowledge base."
+  ],
+  "retrieved_recipe_ids": [],
+  "per_turn_retrieved": [
+    []
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "filter_recipes",
+        "args": {
+          "ingredients_required": [
+            "garlic",
+            "ginger"
+          ]
+        },
+        "error": "filter_recipes() got an unexpected keyword argument 'ingredients_required'"
+      }
+    ]
+  ],
+  "latency_seconds": 20.339343786239624,
+  "token_usage": {
+    "input": 918,
+    "output": 1614
+  }
+}

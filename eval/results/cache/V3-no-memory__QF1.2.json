@@ -1,0 +1,53 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF1.2",
+  "family": "factual",
+  "subtype": "in_kb_ingredient_list",
+  "gold_recipe_ids": [
+    "mapo_tofu"
+  ],
+  "answer": "For Mapo Tofu (id=mapo_tofu), you need: soft tofu, ground pork, doubanjiang (broad bean paste), garlic, ginger, Sichuan peppercorn, chili oil, green onion, light soy sauce, and cornstarch slurry.",
+  "per_turn_responses": [
+    "For Mapo Tofu (id=mapo_tofu), you need: soft tofu, ground pork, doubanjiang (broad bean paste), garlic, ginger, Sichuan peppercorn, chili oil, green onion, light soy sauce, and cornstarch slurry."
+  ],
+  "retrieved_recipe_ids": [
+    "mapo_tofu"
+  ],
+  "per_turn_retrieved": [
+    [
+      "mapo_tofu"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "mapo tofu",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "mapo_tofu",
+            "score": 0.8632523417472839,
+            "name": "Mapo Tofu"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step1"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 9.741297245025635,
+  "token_usage": {
+    "input": 984,
+    "output": 816
+  }
+}

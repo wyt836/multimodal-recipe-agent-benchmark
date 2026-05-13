@@ -1,0 +1,33 @@
+{
+  "system": "V1",
+  "query_id": "QF3.1",
+  "family": "multi_hop",
+  "subtype": "filter_then_argmin",
+  "gold_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "answer": "Based on the recipe context, the **Tomato and Egg Stir-fry** is the only recipe that uses exactly the ingredients you have (eggs, tomatoes, and onions) plus common pantry items (sugar, salt, vegetable oil). It is also the fastest option, with a total time of **8 minutes**.",
+  "per_turn_responses": [
+    "Based on the recipe context, the **Tomato and Egg Stir-fry** is the only recipe that uses exactly the ingredients you have (eggs, tomatoes, and onions) plus common pantry items (sugar, salt, vegetable oil). It is also the fastest option, with a total time of **8 minutes**."
+  ],
+  "retrieved_recipe_ids": [
+    "tomato_egg_stirfry",
+    "shakshuka",
+    "frittata"
+  ],
+  "per_turn_retrieved": [
+    [
+      "tomato_egg_stirfry",
+      "shakshuka",
+      "frittata"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 4.000708818435669,
+  "token_usage": {
+    "input": 455,
+    "output": 322
+  }
+}

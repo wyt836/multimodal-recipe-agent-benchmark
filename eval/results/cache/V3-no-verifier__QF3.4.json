@@ -1,0 +1,87 @@
+{
+  "system": "V3-no-verifier",
+  "query_id": "QF3.4",
+  "family": "multi_hop",
+  "subtype": "multi_constraint_filter",
+  "gold_recipe_ids": [
+    "miso_soup",
+    "tonkatsu",
+    "curry_udon",
+    "tomato_egg_stirfry",
+    "avocado_toast"
+  ],
+  "answer": "Only one recipe from my knowledge base meets both conditions (under 25 minutes total and no seafood): **Avocado Toast** (id=avocado_toast, total 5 minutes). It is vegetarian, vegan, and dairy-free, but contains gluten.\n\nThe other two recipes—Southern Fried Chicken (40 min) and Indian Chicken Curry (55 min)—take longer than 25 minutes.",
+  "per_turn_responses": [
+    "Only one recipe from my knowledge base meets both conditions (under 25 minutes total and no seafood): **Avocado Toast** (id=avocado_toast, total 5 minutes). It is vegetarian, vegan, and dairy-free, but contains gluten.\n\nThe other two recipes—Southern Fried Chicken (40 min) and Indian Chicken Curry (55 min)—take longer than 25 minutes."
+  ],
+  "retrieved_recipe_ids": [
+    "fried_chicken",
+    "avocado_toast",
+    "chicken_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "fried_chicken",
+      "avocado_toast",
+      "chicken_curry"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "recipes under 25 minutes no seafood",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "fried_chicken",
+            "score": 0.5085349678993225,
+            "name": "Southern Fried Chicken"
+          },
+          {
+            "recipe_id": "avocado_toast",
+            "score": 0.49498581886291504,
+            "name": "Avocado Toast"
+          },
+          {
+            "recipe_id": "chicken_curry",
+            "score": 0.48268306255340576,
+            "name": "Indian Chicken Curry"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step1[0].recipe_id"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 3,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step1[1].recipe_id"
+        },
+        "result_summary": null
+      },
+      {
+        "step": 4,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step1[2].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 23.64029097557068,
+  "token_usage": {
+    "input": 1338,
+    "output": 3151
+  }
+}

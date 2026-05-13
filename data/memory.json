@@ -1,0 +1,17 @@
+{
+  "user_profile": {
+    "allergies": [],
+    "dietary": [
+      "vegetarian"
+    ],
+    "dislikes": [],
+    "preferences": [
+      "chicken"
+    ]
+  },
+  "session_state": {
+    "current_constraints": {},
+    "last_recommendation": "avocado_toast"
+  },
+  "cooking_history": []
+}

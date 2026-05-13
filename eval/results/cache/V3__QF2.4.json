@@ -1,0 +1,59 @@
+{
+  "system": "V3",
+  "query_id": "QF2.4",
+  "family": "cross_modal",
+  "subtype": "adversarial_cuisine_filter",
+  "gold_recipe_ids": [
+    "tonkatsu"
+  ],
+  "answer": "Tonkatsu (id=tonkatsu) is a Japanese dish with a thick, golden-brown, crispy panko coating.",
+  "per_turn_responses": [
+    "Tonkatsu (id=tonkatsu) is a Japanese dish with a thick, golden-brown, crispy panko coating."
+  ],
+  "retrieved_recipe_ids": [
+    "tonkatsu",
+    "tomato_egg_stirfry",
+    "tempura"
+  ],
+  "per_turn_retrieved": [
+    [
+      "tonkatsu",
+      "tomato_egg_stirfry",
+      "tempura"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "Japanese golden crispy fried coating",
+          "k": 3
+        },
+        "result_summary": [
+          {
+            "recipe_id": "tonkatsu",
+            "score": 0.3071320652961731,
+            "name": "Tonkatsu"
+          },
+          {
+            "recipe_id": "tomato_egg_stirfry",
+            "score": 0.2885459065437317,
+            "name": "Tomato and Egg Stir-fry"
+          },
+          {
+            "recipe_id": "tempura",
+            "score": 0.2594106197357178,
+            "name": "Tempura"
+          }
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 21.563884973526,
+  "token_usage": {
+    "input": 1481,
+    "output": 1859
+  }
+}

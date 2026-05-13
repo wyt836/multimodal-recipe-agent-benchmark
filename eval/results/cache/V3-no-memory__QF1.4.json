@@ -1,0 +1,53 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF1.4",
+  "family": "factual",
+  "subtype": "in_kb_single_fact",
+  "gold_recipe_ids": [
+    "beef_wellington"
+  ],
+  "answer": "The recipe for Beef Wellington does not include a difficulty level in the provided data.",
+  "per_turn_responses": [
+    "The recipe for Beef Wellington does not include a difficulty level in the provided data."
+  ],
+  "retrieved_recipe_ids": [
+    "beef_wellington"
+  ],
+  "per_turn_retrieved": [
+    [
+      "beef_wellington"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_text_content",
+        "args": {
+          "query": "beef wellington",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "beef_wellington",
+            "score": 0.8560038805007935,
+            "name": "Beef Wellington"
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "tool": "get_recipe_by_id",
+        "args": {
+          "recipe_id": "$step_1[0].recipe_id"
+        },
+        "result_summary": null
+      }
+    ]
+  ],
+  "latency_seconds": 7.706712961196899,
+  "token_usage": {
+    "input": 982,
+    "output": 510
+  }
+}

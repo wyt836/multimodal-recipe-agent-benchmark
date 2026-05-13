@@ -1,0 +1,45 @@
+{
+  "system": "V3-no-memory",
+  "query_id": "QF2.2",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "lasagna"
+  ],
+  "answer": "The Classic Beef Lasagna (id=lasagna) has a layered, stacked presentation in its image, showing four distinct layers of meat ragù, pasta sheets, béchamel, and cheese.",
+  "per_turn_responses": [
+    "The Classic Beef Lasagna (id=lasagna) has a layered, stacked presentation in its image, showing four distinct layers of meat ragù, pasta sheets, béchamel, and cheese."
+  ],
+  "retrieved_recipe_ids": [
+    "lasagna"
+  ],
+  "per_turn_retrieved": [
+    [
+      "lasagna"
+    ]
+  ],
+  "tool_calls": [
+    [
+      {
+        "step": 1,
+        "tool": "search_image_visual",
+        "args": {
+          "query": "layered stacked presentation",
+          "k": 1
+        },
+        "result_summary": [
+          {
+            "recipe_id": "lasagna",
+            "score": 0.21641123294830322,
+            "name": "Classic Beef Lasagna"
+          }
+        ]
+      }
+    ]
+  ],
+  "latency_seconds": 7.204413175582886,
+  "token_usage": {
+    "input": 998,
+    "output": 503
+  }
+}

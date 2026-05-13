@@ -1,0 +1,31 @@
+{
+  "system": "V1",
+  "query_id": "QF2.3",
+  "family": "cross_modal",
+  "subtype": "visual_to_recipe_standard",
+  "gold_recipe_ids": [
+    "pesto_pasta"
+  ],
+  "answer": "Based on the recipe context, there are two recipes that have a bright green herb garnish on top:\n\n1. **Pesto Pasta** – described as \"topped with several whole fresh basil leaves\" (bright green herb).\n2. **Indian Chicken Curry** – described as \"garnished with chopped green coriander leaves\" (also a bright green herb).\n\nBoth fit the description.",
+  "per_turn_responses": [
+    "Based on the recipe context, there are two recipes that have a bright green herb garnish on top:\n\n1. **Pesto Pasta** – described as \"topped with several whole fresh basil leaves\" (bright green herb).\n2. **Indian Chicken Curry** – described as \"garnished with chopped green coriander leaves\" (also a bright green herb).\n\nBoth fit the description."
+  ],
+  "retrieved_recipe_ids": [
+    "avocado_toast",
+    "pesto_pasta",
+    "chicken_curry"
+  ],
+  "per_turn_retrieved": [
+    [
+      "avocado_toast",
+      "pesto_pasta",
+      "chicken_curry"
+    ]
+  ],
+  "tool_calls": [],
+  "latency_seconds": 4.900034427642822,
+  "token_usage": {
+    "input": 441,
+    "output": 431
+  }
+}
