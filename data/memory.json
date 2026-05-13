@@ -1,17 +1,13 @@
 {
   "user_profile": {
     "allergies": [],
-    "dietary": [
-      "vegetarian"
-    ],
+    "dietary": [],
     "dislikes": [],
-    "preferences": [
-      "chicken"
-    ]
+    "preferences": []
   },
   "session_state": {
     "current_constraints": {},
-    "last_recommendation": "avocado_toast"
+    "last_recommendation": "miso_soup"
   },
   "cooking_history": []
 }

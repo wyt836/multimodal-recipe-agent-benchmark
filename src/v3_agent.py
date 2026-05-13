@@ -446,7 +446,16 @@ def _graph():
 def run(query_turns: list[dict],
         no_memory: bool = False,
         no_planner: bool = False,
-        no_verifier: bool = False) -> dict:
+        no_verifier: bool = False,
+        chat_continue: bool = False) -> dict:
+    """Run the V3 agent over a list of conversational turns.
+
+    chat_continue=False (default, benchmark mode): reset memory before this call
+        so each benchmark query is independent.
+    chat_continue=True (REPL mode): preserve memory across calls so the chat
+        agent accumulates user facts (allergies, preferences) over the session.
+        The caller is responsible for the initial mem.reset_memory().
+    """
     from retrieval import build_indices
     build_indices()
 
@@ -458,10 +467,10 @@ def run(query_turns: list[dict],
     total_in = total_out = 0
     t0 = time.time()
 
-    if no_memory:
-        mem.reset_memory()  # start clean and don't carry across turns
-    else:
-        mem.reset_memory()  # per-query reset is the benchmark contract
+    # Memory reset contract: benchmark resets per-call to keep queries
+    # independent; chat mode skips the reset so prior turns' facts persist.
+    if not chat_continue:
+        mem.reset_memory()
 
     graph = _graph()
     for turn in query_turns:

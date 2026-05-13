@@ -34,7 +34,8 @@ python src/benchmark.py --systems V0,V3          # restrict systems
 python src/benchmark.py --queries QF1.1,QF3.5    # restrict queries
 python src/benchmark.py --no-cache               # force rerun
 python src/benchmark.py --score-only             # rescore existing raw_outputs.jsonl
-py src/visualize.py                          # render 4 result figures to eval/results/figures/
+python src/visualize.py                          # render 4 result figures to eval/results/figures/
+python src/chat.py                               # interactive REPL over V3 (memory persists across turns)
 ```
 
 ## Outputs (in `eval/results/`)
