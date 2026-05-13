@@ -1,0 +1,982 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_queries": 20,
+    "family_counts": {
+      "factual": 5,
+      "cross_modal": 5,
+      "multi_hop": 5,
+      "conversational": 5
+    },
+    "constraint_types_used": [
+      "answer_acknowledges_conflict",
+      "answer_contains_number",
+      "answer_contains_text",
+      "answer_does_not_contain_text",
+      "answer_does_not_mention",
+      "answer_identifies_as_superlative",
+      "answer_indicates_no_recipe",
+      "answer_mentions_all_recipes",
+      "answer_mentions_recipe",
+      "answer_recipe_count",
+      "answer_recipes_subset_of"
+    ],
+    "constraint_schema_note": "Each verifiable_constraint has a 'type' key (constraint name) and a 'params' key (parameters specific to that type). Multi-turn queries (QF4) may include a 'turn_index' field (0-indexed; default = last turn). benchmark.py must dispatch each constraint type to its corresponding check function and ALL constraints must pass for task_success = True.",
+    "applicable_metrics_note": "Each query lists which metrics are applicable. For example, QF1.5 (out-of-KB) and QF3.5 (aggregate) have no gold_recipe_ids, so recall@3 does not apply. benchmark.py should skip non-applicable metrics for those queries."
+  },
+  "queries": [
+    {
+      "query_id": "QF1.1",
+      "family": "factual",
+      "subtype": "in_kb_single_fact",
+      "turns": [
+        {
+          "role": "user",
+          "content": "How long does the miso soup take to cook?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "miso_soup"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_contains_number",
+          "params": {
+            "accepted_values": [
+              15,
+              20
+            ]
+          }
+        },
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "miso_soup"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Basic factual lookup. V0 will likely hallucinate a time; V1+ will retrieve and answer correctly."
+    },
+    {
+      "query_id": "QF1.2",
+      "family": "factual",
+      "subtype": "in_kb_ingredient_list",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What ingredients do I need for mapo tofu?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "mapo_tofu"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_contains_text",
+          "params": {
+            "any_of": [
+              "tofu"
+            ]
+          }
+        },
+        {
+          "type": "answer_contains_text",
+          "params": {
+            "any_of": [
+              "pork",
+              "ground pork"
+            ]
+          }
+        },
+        {
+          "type": "answer_contains_text",
+          "params": {
+            "any_of": [
+              "doubanjiang",
+              "broad bean",
+              "chili bean",
+              "fermented bean"
+            ]
+          }
+        },
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "mapo_tofu"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Tests retrieval + faithful enumeration of structured fields. V0 may give generic mapo tofu ingredients from training data — V1+ should match our specific recipe."
+    },
+    {
+      "query_id": "QF1.3",
+      "family": "factual",
+      "subtype": "in_kb_single_fact",
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many servings does the chicken curry recipe make?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "chicken_curry"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_contains_number",
+          "params": {
+            "accepted_values": [
+              4
+            ]
+          }
+        },
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "chicken_curry"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Single numeric field lookup. Clean ground truth for V0 hallucination detection."
+    },
+    {
+      "query_id": "QF1.4",
+      "family": "factual",
+      "subtype": "in_kb_single_fact",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What's the difficulty level of beef wellington?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "beef_wellington"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_contains_text",
+          "params": {
+            "any_of": [
+              "hard",
+              "difficult",
+              "challenging",
+              "advanced"
+            ]
+          }
+        },
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "beef_wellington"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Categorical field lookup. V0 may answer correctly from world knowledge (beef wellington is famously hard), so this query alone won't discriminate V0 from V1+; differentiation comes from combination with other metrics like faithfulness (V0 may invent supporting details)."
+    },
+    {
+      "query_id": "QF1.5",
+      "family": "factual",
+      "subtype": "out_of_kb_hallucination_probe",
+      "turns": [
+        {
+          "role": "user",
+          "content": "How do I make sushi rolls?"
+        }
+      ],
+      "gold_recipe_ids": [],
+      "verifiable_constraints": [
+        {
+          "type": "answer_indicates_no_recipe",
+          "params": {
+            "refusal_phrases": [
+              "don't have",
+              "not have",
+              "no recipe",
+              "couldn't find",
+              "could not find",
+              "not in my",
+              "not available",
+              "not in the collection",
+              "no sushi",
+              "outside my",
+              "unable to find",
+              "i don't"
+            ]
+          }
+        },
+        {
+          "type": "answer_does_not_contain_text",
+          "params": {
+            "none_of": [
+              "nori",
+              "vinegar rice",
+              "wasabi",
+              "soy sauce"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "ADVERSARIAL hallucination probe. Recipe is intentionally absent. V0 will write a plausible sushi tutorial from training data. V1+ should refuse if retrieval scores fall below threshold. This isolates 'KB-grounded refusal' as a system capability."
+    },
+    {
+      "query_id": "QF2.1",
+      "family": "cross_modal",
+      "subtype": "visual_to_recipe_standard",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Find a recipe whose image shows tofu cubes floating in broth."
+        }
+      ],
+      "gold_recipe_ids": [
+        "miso_soup"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "miso_soup"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "visual_grounding",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Standard cross-modal: query references visual property explicitly. V1 (text-only) may still answer correctly because the caption mentions tofu — but if so, that's an interesting finding for the report (caption indexing rivals image indexing)."
+    },
+    {
+      "query_id": "QF2.2",
+      "family": "cross_modal",
+      "subtype": "visual_to_recipe_standard",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which recipe has a layered, stacked presentation in its image?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "lasagna"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "lasagna"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "visual_grounding",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Visual structural property (layered) is harder to express in caption — should favor V2/V3 over V1."
+    },
+    {
+      "query_id": "QF2.3",
+      "family": "cross_modal",
+      "subtype": "visual_to_recipe_standard",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Find the recipe with bright green herb garnish on top."
+        }
+      ],
+      "gold_recipe_ids": [
+        "pesto_pasta"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "pesto_pasta"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "visual_grounding",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Color + spatial property. Pesto's vivid green dominates the image; should retrieve via CLIP image embedding."
+    },
+    {
+      "query_id": "QF2.4",
+      "family": "cross_modal",
+      "subtype": "adversarial_cuisine_filter",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Find a Japanese dish with a golden, crispy fried coating."
+        }
+      ],
+      "gold_recipe_ids": [
+        "tonkatsu"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "tonkatsu"
+          }
+        },
+        {
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "fried_chicken"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "visual_grounding",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "ADVERSARIAL: visually-similar distractors exist (tempura, fried_chicken). V2 may retrieve all three by CLIP similarity. V3's verifier should filter by cuisine=Japanese. This is the recipe-domain analog of the lecture's medical case (visual similarity ≠ correct context)."
+    },
+    {
+      "query_id": "QF2.5",
+      "family": "cross_modal",
+      "subtype": "adversarial_cuisine_exclusion",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I want a yellow noodle dish, but not Thai cuisine."
+        }
+      ],
+      "gold_recipe_ids": [
+        "curry_udon"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "curry_udon"
+          }
+        },
+        {
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "pad_thai"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "visual_grounding",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "ADVERSARIAL with explicit exclusion. The query embeds a hard constraint (not Thai) on top of a soft visual property (yellow noodle). V2 may retrieve pad_thai due to visual similarity; V3's verifier should enforce the exclusion."
+    },
+    {
+      "query_id": "QF3.1",
+      "family": "multi_hop",
+      "subtype": "filter_then_argmin",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I have eggs, tomatoes, and onions. What can I cook from my recipes, and which option is the fastest?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "tomato_egg_stirfry",
+        "shakshuka",
+        "frittata"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_all_recipes",
+          "params": {
+            "recipe_ids": [
+              "tomato_egg_stirfry",
+              "shakshuka",
+              "frittata"
+            ],
+            "min_required": 2
+          }
+        },
+        {
+          "type": "answer_identifies_as_superlative",
+          "params": {
+            "recipe_id": "tomato_egg_stirfry",
+            "superlative_terms": [
+              "fastest",
+              "quickest",
+              "shortest",
+              "fastest option",
+              "least time",
+              "8 min"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Two-step reasoning: (1) filter by ingredient containment, (2) argmin over cooking_time. V1/V2 may surface candidates but fail at the comparison step. V3's planner should explicitly chain filter_recipes → compute_aggregate."
+    },
+    {
+      "query_id": "QF3.2",
+      "family": "multi_hop",
+      "subtype": "filter_then_argmin",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Among my vegetarian recipes, which has the shortest preparation time?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "avocado_toast"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_identifies_as_superlative",
+          "params": {
+            "recipe_id": "avocado_toast",
+            "superlative_terms": [
+              "shortest",
+              "quickest",
+              "fastest prep",
+              "2 min",
+              "least prep"
+            ]
+          }
+        },
+        {
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "avocado_toast"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Single-axis filter+argmin. Highlights V3's structured tools."
+    },
+    {
+      "query_id": "QF3.3",
+      "family": "multi_hop",
+      "subtype": "set_intersection",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which recipes use both garlic AND ginger as ingredients?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "mapo_tofu",
+        "chicken_curry"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_mentions_all_recipes",
+          "params": {
+            "recipe_ids": [
+              "mapo_tofu",
+              "chicken_curry"
+            ],
+            "min_required": 2
+          }
+        },
+        {
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "mapo_tofu",
+              "chicken_curry"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Set intersection across ingredient lists. Pure semantic retrieval cannot do this reliably — agent must use structured filter."
+    },
+    {
+      "query_id": "QF3.4",
+      "family": "multi_hop",
+      "subtype": "multi_constraint_filter",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Give me 3 recipes I can make in under 25 minutes that don't use seafood."
+        }
+      ],
+      "gold_recipe_ids": [
+        "miso_soup",
+        "tonkatsu",
+        "curry_udon",
+        "tomato_egg_stirfry",
+        "avocado_toast"
+      ],
+      "verifiable_constraints": [
+        {
+          "type": "answer_recipe_count",
+          "params": {
+            "min_count": 3
+          }
+        },
+        {
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "miso_soup",
+              "mapo_tofu",
+              "tonkatsu",
+              "curry_udon",
+              "tomato_egg_stirfry",
+              "avocado_toast",
+              "kung_pao_chicken"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "recall@3",
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Multi-constraint filter. Note kung_pao_chicken is acceptable (25 min, no seafood; if 'under' is interpreted as ≤). 8 valid candidates exist in KB; system must return 3 distinct ones, all satisfying both filters. Catches V0/V1 hallucinating seafood-containing recipes."
+    },
+    {
+      "query_id": "QF3.5",
+      "family": "multi_hop",
+      "subtype": "aggregate_computation",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What is the average cooking time (in minutes) of my Asian recipes?"
+        }
+      ],
+      "gold_recipe_ids": [],
+      "verifiable_constraints": [
+        {
+          "type": "answer_contains_number",
+          "params": {
+            "value_range": [
+              33,
+              39
+            ],
+            "note": "Asian dish mean = 35.77 min"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Aggregate computation. Requires V3's compute_aggregate tool. V1/V2 may produce a number, but it's likely hallucinated. Faithfulness check against retrieved recipe set is critical here."
+    },
+    {
+      "query_id": "QF4.1",
+      "family": "conversational",
+      "subtype": "memory_dietary_allergen",
+      "turns": [
+        {
+          "role": "user",
+          "content": "By the way, I'm allergic to peanuts."
+        },
+        {
+          "role": "user",
+          "content": "What's a good Thai dish I can try?"
+        },
+        {
+          "role": "user",
+          "content": "Anything quicker than that?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "tom_yum_soup"
+      ],
+      "verifiable_constraints": [
+        {
+          "turn_index": 1,
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "tom_yum_soup"
+          }
+        },
+        {
+          "turn_index": 1,
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "pad_thai",
+              "massaman_curry"
+            ]
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "miso_soup",
+              "tomato_egg_stirfry",
+              "avocado_toast",
+              "curry_udon",
+              "tonkatsu"
+            ]
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "pad_thai",
+              "massaman_curry",
+              "kung_pao_chicken"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Memory test: allergen constraint stated in T1 must persist through T3. V0-V2 are stateless and will reintroduce peanut dishes on T2 or T3."
+    },
+    {
+      "query_id": "QF4.2",
+      "family": "conversational",
+      "subtype": "memory_accumulating_constraints",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I'm vegetarian and I only have about 30 minutes to cook tonight."
+        },
+        {
+          "role": "user",
+          "content": "What can I make?"
+        },
+        {
+          "role": "user",
+          "content": "Which of those looks the most colorful?"
+        }
+      ],
+      "gold_recipe_ids": [
+        "bibimbap"
+      ],
+      "verifiable_constraints": [
+        {
+          "turn_index": 1,
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "miso_soup",
+              "pesto_pasta",
+              "tomato_egg_stirfry",
+              "shakshuka",
+              "avocado_toast",
+              "bibimbap"
+            ]
+          }
+        },
+        {
+          "turn_index": 1,
+          "type": "answer_recipe_count",
+          "params": {
+            "min_count": 2
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "bibimbap"
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "visual_grounding",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Compound test: memory (carry vegetarian+time from T1 to T2) + cross-modal (visual judgment in T3 still constrained by T1's filters). Exercises both memory and verifier nodes."
+    },
+    {
+      "query_id": "QF4.3",
+      "family": "conversational",
+      "subtype": "memory_negative_recall",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I cooked miso soup yesterday."
+        },
+        {
+          "role": "user",
+          "content": "Suggest something different I can make for dinner tonight."
+        },
+        {
+          "role": "user",
+          "content": "Hmm, can I get something quicker than that one?"
+        }
+      ],
+      "gold_recipe_ids": [],
+      "verifiable_constraints": [
+        {
+          "turn_index": 1,
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "miso_soup"
+            ]
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "tomato_egg_stirfry",
+              "avocado_toast"
+            ]
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "miso_soup"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Memory test: T1 establishes a NEGATIVE constraint (don't suggest miso). T3 requires remembering miso's cooking time to interpret 'quicker than that one'. Tests both factual memory and referential memory."
+    },
+    {
+      "query_id": "QF4.4",
+      "family": "conversational",
+      "subtype": "memory_preference_conflict",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I really don't like spicy food."
+        },
+        {
+          "role": "user",
+          "content": "What Sichuan dishes do you have?"
+        },
+        {
+          "role": "user",
+          "content": "OK then show me a Cantonese dish instead."
+        }
+      ],
+      "gold_recipe_ids": [
+        "char_siu_pork"
+      ],
+      "verifiable_constraints": [
+        {
+          "turn_index": 1,
+          "type": "answer_acknowledges_conflict",
+          "params": {
+            "hedge_terms": [
+              "spicy",
+              "hot",
+              "however",
+              "but",
+              "warning",
+              "note that",
+              "all of",
+              "tend to be",
+              "are spicy",
+              "still spicy",
+              "less spicy",
+              "milder"
+            ]
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_mentions_recipe",
+          "params": {
+            "recipe_id": "char_siu_pork"
+          }
+        },
+        {
+          "turn_index": 2,
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "char_siu_pork"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Tests preference-based filtering with conflict handling. V0-V2 may silently recommend spicy dishes. V3 with memory should flag conflict in T2 and correctly switch cuisine in T3."
+    },
+    {
+      "query_id": "QF4.5",
+      "family": "conversational",
+      "subtype": "memory_constraint_override",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What chicken dishes can I make tonight?"
+        },
+        {
+          "role": "user",
+          "content": "Actually, change of plans — make it vegetarian instead."
+        }
+      ],
+      "gold_recipe_ids": [],
+      "verifiable_constraints": [
+        {
+          "turn_index": 0,
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "chicken_curry",
+              "fried_chicken",
+              "kung_pao_chicken"
+            ]
+          }
+        },
+        {
+          "turn_index": 1,
+          "type": "answer_recipes_subset_of",
+          "params": {
+            "allowed_recipe_ids": [
+              "miso_soup",
+              "pesto_pasta",
+              "tomato_egg_stirfry",
+              "shakshuka",
+              "frittata",
+              "avocado_toast",
+              "bibimbap"
+            ]
+          }
+        },
+        {
+          "turn_index": 1,
+          "type": "answer_does_not_mention",
+          "params": {
+            "forbidden_recipe_ids": [
+              "chicken_curry",
+              "fried_chicken",
+              "kung_pao_chicken"
+            ]
+          }
+        }
+      ],
+      "applicable_metrics": [
+        "task_success",
+        "faithfulness",
+        "latency",
+        "token_usage",
+        "tool_calls"
+      ],
+      "design_rationale": "Tests constraint OVERRIDE (vs accumulation). The system must drop the chicken constraint when user says 'change of plans'. V0-V2 stateless: T2 alone is ambiguous without memory. V3 should track that the active constraint changed."
+    }
+  ]
+}

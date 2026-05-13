@@ -1,0 +1,1814 @@
+[
+  {
+    "id": "miso_soup",
+    "name": "Miso Soup",
+    "cuisine": "Japanese",
+    "prep_time_min": 5,
+    "cooking_time_min": 15,
+    "total_time_min": 20,
+    "difficulty": "Easy",
+    "servings": 2,
+    "main_protein": "tofu",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "dashi stock",
+        "amount": 500,
+        "unit": "ml"
+      },
+      {
+        "name": "miso paste",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "silken tofu",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "wakame seaweed",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "green onion",
+        "amount": 1,
+        "unit": "stalk"
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "dairy-free"
+    ],
+    "allergens": [
+      "soy"
+    ],
+    "cooking_methods": [
+      "boil",
+      "simmer"
+    ],
+    "steps": [
+      "Soak wakame in cold water for 5 minutes until soft, then drain.",
+      "Bring dashi stock to a gentle simmer in a pot.",
+      "Add the wakame and cubed silken tofu, simmer 2 minutes.",
+      "Turn off the heat. Whisk miso paste through a ladle of broth until smooth, then stir it back into the pot.",
+      "Garnish with thinly sliced green onion and serve immediately."
+    ],
+    "image_path": "images/miso_soup.jpg",
+    "image_caption": "A black lacquered bowl of light golden-brown miso soup containing soft white tofu cubes, dark green wakame seaweed strands, and fresh green onion slices floating on top.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "brown",
+        "white",
+        "green"
+      ],
+      "presentation": "soup in dark bowl",
+      "visible_ingredients": [
+        "tofu cubes",
+        "wakame",
+        "green onion"
+      ]
+    }
+  },
+  {
+    "id": "mapo_tofu",
+    "name": "Mapo Tofu",
+    "cuisine": "Sichuan",
+    "prep_time_min": 10,
+    "cooking_time_min": 15,
+    "total_time_min": 25,
+    "difficulty": "Medium",
+    "servings": 3,
+    "main_protein": "pork",
+    "spicy_level": "high",
+    "ingredients": [
+      {
+        "name": "soft tofu",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "ground pork",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "doubanjiang (broad bean paste)",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "garlic",
+        "amount": 4,
+        "unit": "cloves"
+      },
+      {
+        "name": "ginger",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Sichuan peppercorn",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "chili oil",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "green onion",
+        "amount": 2,
+        "unit": "stalks"
+      },
+      {
+        "name": "light soy sauce",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cornstarch slurry",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [],
+    "allergens": [
+      "soy",
+      "gluten"
+    ],
+    "cooking_methods": [
+      "stir-fry",
+      "simmer"
+    ],
+    "steps": [
+      "Cube the soft tofu and blanch in lightly salted water for 1 minute. Drain.",
+      "Heat oil in a wok. Brown the ground pork until crispy at the edges.",
+      "Add minced garlic, ginger, and doubanjiang. Stir-fry until fragrant and the oil turns red.",
+      "Pour in 200ml water and the soy sauce. Slide in the tofu and simmer gently for 5 minutes.",
+      "Stir in cornstarch slurry to thicken. Drizzle with chili oil.",
+      "Top with toasted ground Sichuan peppercorn and chopped green onion."
+    ],
+    "image_path": "images/mapo_tofu.jpg",
+    "image_caption": "A shallow white bowl of vivid red mapo tofu, with glossy chili oil pooling around white cubes of silken tofu, flecked with dark ground pork and bright green scallion slices.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "red",
+        "white",
+        "dark brown"
+      ],
+      "presentation": "saucy stew in shallow bowl",
+      "visible_ingredients": [
+        "tofu cubes",
+        "ground pork",
+        "scallion",
+        "chili oil"
+      ]
+    }
+  },
+  {
+    "id": "chicken_curry",
+    "name": "Indian Chicken Curry",
+    "cuisine": "Indian",
+    "prep_time_min": 15,
+    "cooking_time_min": 40,
+    "total_time_min": 55,
+    "difficulty": "Medium",
+    "servings": 4,
+    "main_protein": "chicken",
+    "spicy_level": "medium",
+    "ingredients": [
+      {
+        "name": "boneless chicken thigh",
+        "amount": 600,
+        "unit": "g"
+      },
+      {
+        "name": "yellow onion",
+        "amount": 2
+      },
+      {
+        "name": "tomato",
+        "amount": 3
+      },
+      {
+        "name": "garlic",
+        "amount": 5,
+        "unit": "cloves"
+      },
+      {
+        "name": "ginger",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "garam masala",
+        "amount": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "turmeric",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "cumin",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "coconut milk",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "fresh coriander",
+        "amount": 1,
+        "unit": "handful"
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "allergens": [],
+    "cooking_methods": [
+      "simmer",
+      "stir-fry"
+    ],
+    "steps": [
+      "Dice the onions. Blend tomato, garlic, and ginger into a smooth paste.",
+      "Sauté onions in oil over medium heat for 8 minutes until deep golden.",
+      "Add cumin, turmeric, garam masala. Toast for 30 seconds.",
+      "Stir in the tomato-garlic-ginger paste and cook 5 minutes until oil separates.",
+      "Add cubed chicken thigh, brown for 4 minutes.",
+      "Pour in coconut milk and 150ml water. Simmer covered for 25 minutes.",
+      "Finish with chopped fresh coriander."
+    ],
+    "image_path": "images/chicken_curry.jpg",
+    "image_caption": "A rustic copper bowl of rich golden-orange chicken curry, with tender chicken pieces visible in a creamy tomato-coconut sauce, garnished with chopped green coriander leaves.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "orange",
+        "golden",
+        "green"
+      ],
+      "presentation": "saucy curry in copper bowl",
+      "visible_ingredients": [
+        "chicken pieces",
+        "coriander",
+        "sauce"
+      ]
+    }
+  },
+  {
+    "id": "beef_wellington",
+    "name": "Beef Wellington",
+    "cuisine": "British",
+    "prep_time_min": 60,
+    "cooking_time_min": 60,
+    "total_time_min": 120,
+    "difficulty": "Hard",
+    "servings": 6,
+    "main_protein": "beef",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "beef tenderloin",
+        "amount": 1,
+        "unit": "kg"
+      },
+      {
+        "name": "puff pastry",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "name": "button mushroom",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "name": "prosciutto",
+        "amount": 8,
+        "unit": "slices"
+      },
+      {
+        "name": "Dijon mustard",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "egg yolk",
+        "amount": 2
+      },
+      {
+        "name": "shallot",
+        "amount": 2
+      },
+      {
+        "name": "thyme",
+        "amount": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [],
+    "allergens": [
+      "gluten",
+      "egg",
+      "dairy"
+    ],
+    "cooking_methods": [
+      "sear",
+      "bake"
+    ],
+    "steps": [
+      "Sear the seasoned beef tenderloin on all sides in a very hot pan. Cool, then brush with mustard.",
+      "Finely chop mushrooms and shallots. Sauté with thyme until completely dry to make a duxelles.",
+      "Lay prosciutto on cling film, spread duxelles over it, place beef on top, then roll tightly. Chill 30 min.",
+      "Unwrap and wrap the parcel in puff pastry. Seal edges, score the top, brush with egg yolk.",
+      "Bake at 200°C / 400°F for 35–40 minutes until pastry is deep golden and beef is medium-rare.",
+      "Rest for 10 minutes before slicing into thick rounds."
+    ],
+    "image_path": "images/beef_wellington.jpg",
+    "image_caption": "A cross-section slice of beef Wellington showing a ring of golden flaky puff pastry around a thin band of dark mushroom duxelles wrapping a perfectly pink medium-rare beef tenderloin, plated on white porcelain.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "golden brown",
+        "pink",
+        "dark brown"
+      ],
+      "presentation": "sliced cross-section on plate",
+      "visible_ingredients": [
+        "pastry crust",
+        "pink beef",
+        "mushroom layer"
+      ]
+    }
+  },
+  {
+    "id": "pad_thai",
+    "name": "Pad Thai",
+    "cuisine": "Thai",
+    "prep_time_min": 15,
+    "cooking_time_min": 15,
+    "total_time_min": 30,
+    "difficulty": "Medium",
+    "servings": 2,
+    "main_protein": "shrimp",
+    "spicy_level": "low",
+    "ingredients": [
+      {
+        "name": "rice noodles",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "shrimp",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "amount": 2
+      },
+      {
+        "name": "garlic",
+        "amount": 3,
+        "unit": "cloves"
+      },
+      {
+        "name": "tamarind paste",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "palm sugar",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "fish sauce",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "crushed peanuts",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "bean sprouts",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "lime",
+        "amount": 1
+      },
+      {
+        "name": "scallion",
+        "amount": 2,
+        "unit": "stalks"
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free"
+    ],
+    "allergens": [
+      "peanut",
+      "shellfish",
+      "fish",
+      "egg"
+    ],
+    "cooking_methods": [
+      "stir-fry"
+    ],
+    "steps": [
+      "Soak rice noodles in warm water until pliable.",
+      "Mix tamarind, palm sugar, and fish sauce into a sauce.",
+      "Stir-fry garlic and shrimp in a hot wok until shrimp turn pink.",
+      "Push to one side. Crack eggs into the empty space and scramble briefly.",
+      "Add drained noodles and the sauce. Toss until noodles absorb the sauce and turn glossy.",
+      "Add bean sprouts and scallion at the end. Toss for 30 seconds.",
+      "Plate and top generously with crushed peanuts and a lime wedge."
+    ],
+    "image_path": "images/pad_thai.jpg",
+    "image_caption": "A heap of glossy amber-yellow stir-fried rice noodles with pink shrimp, scrambled egg, bean sprouts, and a generous mound of crushed peanuts on top, served with a lime wedge on a bamboo plate.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "amber",
+        "yellow",
+        "pink",
+        "beige"
+      ],
+      "presentation": "noodle pile on flat plate",
+      "visible_ingredients": [
+        "yellow noodles",
+        "shrimp",
+        "peanuts",
+        "lime wedge"
+      ]
+    }
+  },
+  {
+    "id": "tonkatsu",
+    "name": "Tonkatsu",
+    "cuisine": "Japanese",
+    "prep_time_min": 10,
+    "cooking_time_min": 12,
+    "total_time_min": 22,
+    "difficulty": "Medium",
+    "servings": 2,
+    "main_protein": "pork",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "pork loin cutlet",
+        "amount": 2
+      },
+      {
+        "name": "panko breadcrumbs",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "all-purpose flour",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "amount": 2
+      },
+      {
+        "name": "tonkatsu sauce",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "shredded cabbage",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "vegetable oil",
+        "amount": 500,
+        "unit": "ml"
+      }
+    ],
+    "dietary_tags": [],
+    "allergens": [
+      "gluten",
+      "egg"
+    ],
+    "cooking_methods": [
+      "deep-fry"
+    ],
+    "steps": [
+      "Pound pork cutlets to even thickness. Season with salt and pepper.",
+      "Set up three bowls: flour, beaten egg, panko.",
+      "Coat each cutlet in flour, then egg, then press firmly into panko.",
+      "Heat oil to 170°C / 340°F. Fry cutlets 4 minutes per side until deeply golden.",
+      "Drain on a rack. Rest 2 minutes, then slice into thick strips.",
+      "Serve over shredded cabbage with tonkatsu sauce."
+    ],
+    "image_path": "images/tonkatsu.jpg",
+    "image_caption": "Thick golden-brown crumbed pork cutlet sliced into strips, the cross-section revealing pale juicy pork inside a craggy panko crust, served on a bed of finely shredded white cabbage with a drizzle of dark brown tonkatsu sauce.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "golden brown",
+        "white",
+        "dark brown"
+      ],
+      "presentation": "sliced fried cutlet on shredded cabbage",
+      "visible_ingredients": [
+        "panko crust",
+        "pork interior",
+        "shredded cabbage"
+      ]
+    }
+  },
+  {
+    "id": "tempura",
+    "name": "Tempura",
+    "cuisine": "Japanese",
+    "prep_time_min": 15,
+    "cooking_time_min": 15,
+    "total_time_min": 30,
+    "difficulty": "Medium",
+    "servings": 2,
+    "main_protein": "shrimp",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "large shrimp",
+        "amount": 8
+      },
+      {
+        "name": "sweet potato",
+        "amount": 1
+      },
+      {
+        "name": "green bean",
+        "amount": 8
+      },
+      {
+        "name": "shiitake mushroom",
+        "amount": 4
+      },
+      {
+        "name": "tempura flour",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "ice-cold sparkling water",
+        "amount": 150,
+        "unit": "ml"
+      },
+      {
+        "name": "egg yolk",
+        "amount": 1
+      },
+      {
+        "name": "tentsuyu dipping sauce",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "vegetable oil",
+        "amount": 1,
+        "unit": "L"
+      }
+    ],
+    "dietary_tags": [],
+    "allergens": [
+      "shellfish",
+      "gluten",
+      "egg"
+    ],
+    "cooking_methods": [
+      "deep-fry"
+    ],
+    "steps": [
+      "Devein and straighten the shrimp by making tiny incisions on the belly.",
+      "Slice sweet potato and prep all vegetables.",
+      "Mix tempura flour, egg yolk, and ice-cold sparkling water with chopsticks — keep it lumpy.",
+      "Heat oil to 175°C / 345°F.",
+      "Dip ingredients into batter, then drop into hot oil. Fry until very pale gold and crisp, about 2 minutes.",
+      "Drain on a wire rack and serve immediately with tentsuyu dipping sauce."
+    ],
+    "image_path": "images/tempura.jpg",
+    "image_caption": "An assortment of feather-light pale-golden tempura pieces—two large shrimp with curled tails, slices of orange sweet potato, dark green beans, and shiitake mushrooms—arranged on a square slate plate with a small dipping bowl of dark tentsuyu sauce.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "pale gold",
+        "orange",
+        "dark green"
+      ],
+      "presentation": "assorted pieces on slate plate",
+      "visible_ingredients": [
+        "shrimp tails",
+        "sweet potato",
+        "green beans",
+        "shiitake"
+      ]
+    }
+  },
+  {
+    "id": "fried_chicken",
+    "name": "Southern Fried Chicken",
+    "cuisine": "American",
+    "prep_time_min": 15,
+    "cooking_time_min": 25,
+    "total_time_min": 40,
+    "difficulty": "Medium",
+    "servings": 4,
+    "main_protein": "chicken",
+    "spicy_level": "low",
+    "ingredients": [
+      {
+        "name": "chicken thigh and drumstick",
+        "amount": 8,
+        "unit": "pieces"
+      },
+      {
+        "name": "buttermilk",
+        "amount": 500,
+        "unit": "ml"
+      },
+      {
+        "name": "all-purpose flour",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "paprika",
+        "amount": 2,
+        "unit": "tsp"
+      },
+      {
+        "name": "garlic powder",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cayenne pepper",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "black pepper",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "vegetable oil",
+        "amount": 1,
+        "unit": "L"
+      }
+    ],
+    "dietary_tags": [],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "cooking_methods": [
+      "deep-fry"
+    ],
+    "steps": [
+      "Marinate chicken in buttermilk overnight (or at least 2 hours).",
+      "Mix flour with paprika, garlic powder, cayenne, salt, and black pepper.",
+      "Drag wet chicken pieces through seasoned flour, pressing to coat thickly.",
+      "Heat oil to 160°C / 320°F.",
+      "Fry chicken in batches for 12–14 minutes, turning, until deeply mahogany-gold and cooked through.",
+      "Drain on a wire rack. Rest 5 minutes before serving."
+    ],
+    "image_path": "images/fried_chicken.jpg",
+    "image_caption": "A pile of deeply burnished mahogany-gold fried chicken pieces with a craggy, bumpy crust, piled high on parchment-lined dark metal tray, with steam still rising and one piece torn open to show juicy white meat inside.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "deep golden brown",
+        "mahogany"
+      ],
+      "presentation": "pile of fried pieces on metal tray",
+      "visible_ingredients": [
+        "fried chicken pieces",
+        "craggy crust"
+      ]
+    }
+  },
+  {
+    "id": "curry_udon",
+    "name": "Curry Udon",
+    "cuisine": "Japanese",
+    "prep_time_min": 5,
+    "cooking_time_min": 15,
+    "total_time_min": 20,
+    "difficulty": "Easy",
+    "servings": 2,
+    "main_protein": "none",
+    "spicy_level": "low",
+    "ingredients": [
+      {
+        "name": "udon noodles",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Japanese curry roux",
+        "amount": 2,
+        "unit": "cubes"
+      },
+      {
+        "name": "dashi stock",
+        "amount": 600,
+        "unit": "ml"
+      },
+      {
+        "name": "ginger",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "yellow onion",
+        "amount": 1
+      },
+      {
+        "name": "aburaage (fried tofu)",
+        "amount": 2,
+        "unit": "sheets"
+      },
+      {
+        "name": "scallion",
+        "amount": 2,
+        "unit": "stalks"
+      },
+      {
+        "name": "soy sauce",
+        "amount": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free"
+    ],
+    "allergens": [
+      "soy",
+      "gluten"
+    ],
+    "cooking_methods": [
+      "simmer",
+      "boil"
+    ],
+    "steps": [
+      "Thinly slice the onion and grate the ginger.",
+      "Sauté onion and ginger in a pot until softened.",
+      "Add dashi stock, bring to a simmer, then dissolve the curry roux cubes.",
+      "Add sliced aburaage and a splash of soy sauce. Simmer 5 minutes.",
+      "Cook udon noodles separately according to package directions.",
+      "Divide noodles between bowls, ladle the thick yellow curry broth over them, top with scallion."
+    ],
+    "image_path": "images/curry_udon.jpg",
+    "image_caption": "A deep ceramic bowl filled with thick mustard-yellow Japanese curry broth, with fat white udon noodles peeking through, topped with strips of brown aburaage tofu and slivered green scallion.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "mustard yellow",
+        "white",
+        "green"
+      ],
+      "presentation": "noodle soup in deep bowl",
+      "visible_ingredients": [
+        "udon noodles",
+        "yellow curry broth",
+        "aburaage",
+        "scallion"
+      ]
+    }
+  },
+  {
+    "id": "lasagna",
+    "name": "Classic Beef Lasagna",
+    "cuisine": "Italian",
+    "prep_time_min": 30,
+    "cooking_time_min": 60,
+    "total_time_min": 90,
+    "difficulty": "Hard",
+    "servings": 6,
+    "main_protein": "beef",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "lasagna sheets",
+        "amount": 12
+      },
+      {
+        "name": "ground beef",
+        "amount": 500,
+        "unit": "g"
+      },
+      {
+        "name": "canned tomato",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "yellow onion",
+        "amount": 1
+      },
+      {
+        "name": "garlic",
+        "amount": 3,
+        "unit": "cloves"
+      },
+      {
+        "name": "mozzarella cheese",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "parmesan cheese",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "all-purpose flour",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "whole milk",
+        "amount": 500,
+        "unit": "ml"
+      },
+      {
+        "name": "basil",
+        "amount": 1,
+        "unit": "handful"
+      }
+    ],
+    "dietary_tags": [],
+    "allergens": [
+      "dairy",
+      "gluten"
+    ],
+    "cooking_methods": [
+      "bake",
+      "simmer"
+    ],
+    "steps": [
+      "Make ragù: brown beef with diced onion and garlic, add canned tomato, simmer 45 minutes.",
+      "Make béchamel: melt butter, whisk in flour, then gradually add milk, simmering to a smooth sauce.",
+      "In a deep baking dish, layer: ragù → pasta sheets → béchamel → mozzarella. Repeat 4 times.",
+      "Top the final layer with parmesan.",
+      "Bake at 180°C / 360°F for 35 minutes until deep golden and bubbling.",
+      "Rest 15 minutes before cutting — this is essential for clean slices."
+    ],
+    "image_path": "images/lasagna.jpg",
+    "image_caption": "A square slice of lasagna lifted on a spatula, showing four distinct stacked layers: red meat ragù, beige pasta sheets, white béchamel, and melted golden cheese, with strings of cheese stretching and a basil leaf on top.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "red",
+        "golden",
+        "beige",
+        "white"
+      ],
+      "presentation": "layered slice cross-section",
+      "visible_ingredients": [
+        "pasta layers",
+        "ragù",
+        "melted cheese",
+        "basil"
+      ]
+    }
+  },
+  {
+    "id": "pesto_pasta",
+    "name": "Pesto Pasta",
+    "cuisine": "Italian",
+    "prep_time_min": 10,
+    "cooking_time_min": 15,
+    "total_time_min": 25,
+    "difficulty": "Easy",
+    "servings": 2,
+    "main_protein": "none",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "trofie or linguine pasta",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "fresh basil",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "pine nuts",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "garlic",
+        "amount": 1,
+        "unit": "clove"
+      },
+      {
+        "name": "parmesan cheese",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "extra virgin olive oil",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "lemon",
+        "amount": 1
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian"
+    ],
+    "allergens": [
+      "tree nuts",
+      "dairy",
+      "gluten"
+    ],
+    "cooking_methods": [
+      "boil",
+      "raw"
+    ],
+    "steps": [
+      "Boil pasta in heavily salted water until al dente.",
+      "Meanwhile, pound basil, pine nuts, garlic, and a pinch of salt in a mortar (or blitz in a blender).",
+      "Slowly stream in olive oil while continuing to grind, then stir in grated parmesan.",
+      "Reserve a cup of pasta water before draining.",
+      "Toss hot pasta with the pesto off the heat. Loosen with pasta water until silky.",
+      "Finish with a few drops of lemon juice and extra basil leaves on top."
+    ],
+    "image_path": "images/pesto_pasta.jpg",
+    "image_caption": "A round white plate of pasta coated in vibrant bright green basil pesto, topped with several whole fresh basil leaves, scattered pine nuts, and a snowfall of finely grated parmesan.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "bright green",
+        "white",
+        "pale yellow"
+      ],
+      "presentation": "pasta with sauce on round plate",
+      "visible_ingredients": [
+        "basil leaves",
+        "pine nuts",
+        "grated cheese"
+      ]
+    }
+  },
+  {
+    "id": "tomato_egg_stirfry",
+    "name": "Tomato and Egg Stir-fry",
+    "cuisine": "Chinese",
+    "prep_time_min": 3,
+    "cooking_time_min": 5,
+    "total_time_min": 8,
+    "difficulty": "Easy",
+    "servings": 2,
+    "main_protein": "egg",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "egg",
+        "amount": 4
+      },
+      {
+        "name": "tomato",
+        "amount": 3
+      },
+      {
+        "name": "onion",
+        "amount": 1
+      },
+      {
+        "name": "sugar",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "vegetable oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "allergens": [
+      "egg"
+    ],
+    "cooking_methods": [
+      "stir-fry"
+    ],
+    "steps": [
+      "Beat the eggs with a pinch of salt. Dice the tomatoes and onion.",
+      "Heat oil in a wok over high heat. Pour in eggs, scramble briefly until just set, then remove.",
+      "In the same wok, stir-fry onion for 30 seconds, then add tomato. Cook until juicy and saucy, about 2 minutes.",
+      "Return the eggs to the wok. Sprinkle with sugar and salt.",
+      "Toss everything together for 30 seconds. Serve over rice."
+    ],
+    "image_path": "images/tomato_egg_stirfry.jpg",
+    "image_caption": "A bright dish of fluffy yellow scrambled egg curds tumbled together with glossy red tomato chunks and translucent onion slivers in a sheen of sauce, served on a simple white plate.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "yellow",
+        "red",
+        "translucent white"
+      ],
+      "presentation": "stir-fry pile on white plate",
+      "visible_ingredients": [
+        "scrambled egg",
+        "tomato chunks",
+        "onion"
+      ]
+    }
+  },
+  {
+    "id": "shakshuka",
+    "name": "Shakshuka",
+    "cuisine": "Middle Eastern",
+    "prep_time_min": 5,
+    "cooking_time_min": 25,
+    "total_time_min": 30,
+    "difficulty": "Easy",
+    "servings": 3,
+    "main_protein": "egg",
+    "spicy_level": "low",
+    "ingredients": [
+      {
+        "name": "egg",
+        "amount": 5
+      },
+      {
+        "name": "canned tomato",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "yellow onion",
+        "amount": 1
+      },
+      {
+        "name": "red bell pepper",
+        "amount": 1
+      },
+      {
+        "name": "smoked paprika",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "cumin",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "feta cheese",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "parsley",
+        "amount": 1,
+        "unit": "handful"
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "allergens": [
+      "egg",
+      "dairy"
+    ],
+    "cooking_methods": [
+      "simmer"
+    ],
+    "steps": [
+      "Dice onion and bell pepper. Sauté in olive oil for 6 minutes until soft.",
+      "Add cumin and smoked paprika. Toast 30 seconds.",
+      "Pour in canned tomato. Simmer for 12 minutes until thickened.",
+      "Make 5 wells in the sauce and crack an egg into each.",
+      "Cover and cook 5–7 minutes until whites are set but yolks are still runny.",
+      "Crumble feta over the top, scatter with parsley, serve from the skillet with crusty bread."
+    ],
+    "image_path": "images/shakshuka.jpg",
+    "image_caption": "A cast-iron skillet filled with deep-red spiced tomato sauce, dotted with red bell pepper, holding five poached eggs with vivid orange runny yolks, crumbled white feta, and bright green parsley scattered on top.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "deep red",
+        "orange",
+        "white",
+        "green"
+      ],
+      "presentation": "skillet with eggs in sauce",
+      "visible_ingredients": [
+        "whole eggs",
+        "tomato sauce",
+        "feta",
+        "parsley"
+      ]
+    }
+  },
+  {
+    "id": "frittata",
+    "name": "Tomato Onion Frittata",
+    "cuisine": "Italian",
+    "prep_time_min": 5,
+    "cooking_time_min": 35,
+    "total_time_min": 40,
+    "difficulty": "Easy",
+    "servings": 4,
+    "main_protein": "egg",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "egg",
+        "amount": 8
+      },
+      {
+        "name": "cherry tomato",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "red onion",
+        "amount": 1
+      },
+      {
+        "name": "parmesan cheese",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "whole milk",
+        "amount": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "basil",
+        "amount": 1,
+        "unit": "handful"
+      },
+      {
+        "name": "olive oil",
+        "amount": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "allergens": [
+      "egg",
+      "dairy"
+    ],
+    "cooking_methods": [
+      "bake",
+      "stir-fry"
+    ],
+    "steps": [
+      "Preheat oven to 180°C / 360°F.",
+      "Thinly slice red onion. Sauté in an oven-safe skillet for 8 minutes until caramelized.",
+      "Halve cherry tomatoes and add. Cook 3 minutes more.",
+      "Whisk eggs with milk, half the parmesan, salt, and pepper.",
+      "Pour egg mixture over the vegetables. Top with remaining parmesan.",
+      "Transfer to the oven and bake 20–22 minutes until set and gently puffed.",
+      "Cool 5 minutes, finish with torn basil, slice into wedges."
+    ],
+    "image_path": "images/frittata.jpg",
+    "image_caption": "A wedge of golden-yellow frittata showing pockets of red cherry tomato halves and caramelized red onion strands, with a delicate set top scattered with green basil leaves, presented on a wooden board.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "pale golden",
+        "red",
+        "purple-red",
+        "green"
+      ],
+      "presentation": "wedge cut from round frittata",
+      "visible_ingredients": [
+        "egg base",
+        "cherry tomato",
+        "red onion",
+        "basil"
+      ]
+    }
+  },
+  {
+    "id": "avocado_toast",
+    "name": "Avocado Toast",
+    "cuisine": "Modern Western",
+    "prep_time_min": 2,
+    "cooking_time_min": 3,
+    "total_time_min": 5,
+    "difficulty": "Easy",
+    "servings": 1,
+    "main_protein": "none",
+    "spicy_level": "low",
+    "ingredients": [
+      {
+        "name": "sourdough bread",
+        "amount": 2,
+        "unit": "slices"
+      },
+      {
+        "name": "ripe avocado",
+        "amount": 1
+      },
+      {
+        "name": "lemon",
+        "amount": 0.5
+      },
+      {
+        "name": "chili flakes",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "flaky sea salt",
+        "amount": 1,
+        "unit": "pinch"
+      },
+      {
+        "name": "olive oil",
+        "amount": 1,
+        "unit": "tsp"
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian",
+      "vegan",
+      "dairy-free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "cooking_methods": [
+      "toast",
+      "raw"
+    ],
+    "steps": [
+      "Toast the sourdough slices until deeply golden and crisp.",
+      "Halve the avocado, scoop into a bowl, mash with a fork.",
+      "Squeeze in lemon juice and add a pinch of salt. Mix.",
+      "Spread the avocado generously onto the toast.",
+      "Drizzle with olive oil, sprinkle with chili flakes and flaky sea salt."
+    ],
+    "image_path": "images/avocado_toast.jpg",
+    "image_caption": "Two slices of dark golden toasted sourdough heaped with chunky pale-green mashed avocado, dusted with red chili flakes and white flaky salt, drizzled with olive oil, on a marble surface.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "pale green",
+        "golden brown",
+        "red"
+      ],
+      "presentation": "toast slices on marble",
+      "visible_ingredients": [
+        "mashed avocado",
+        "toast",
+        "chili flakes"
+      ]
+    }
+  },
+  {
+    "id": "massaman_curry",
+    "name": "Massaman Beef Curry",
+    "cuisine": "Thai",
+    "prep_time_min": 20,
+    "cooking_time_min": 90,
+    "total_time_min": 110,
+    "difficulty": "Medium",
+    "servings": 4,
+    "main_protein": "beef",
+    "spicy_level": "low",
+    "ingredients": [
+      {
+        "name": "beef chuck",
+        "amount": 700,
+        "unit": "g"
+      },
+      {
+        "name": "massaman curry paste",
+        "amount": 4,
+        "unit": "tbsp"
+      },
+      {
+        "name": "coconut milk",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "potato",
+        "amount": 3
+      },
+      {
+        "name": "yellow onion",
+        "amount": 1
+      },
+      {
+        "name": "ginger",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "roasted peanuts",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "palm sugar",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "tamarind paste",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "fish sauce",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cinnamon stick",
+        "amount": 1
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "allergens": [
+      "peanut",
+      "fish"
+    ],
+    "cooking_methods": [
+      "simmer",
+      "stew"
+    ],
+    "steps": [
+      "Cube the beef. Brown in oil over high heat in batches.",
+      "Reduce heat. Fry massaman paste with grated ginger for 2 minutes until fragrant.",
+      "Add coconut milk, cinnamon, tamarind, palm sugar, fish sauce. Return beef. Simmer covered for 60 minutes.",
+      "Add cubed potato and onion. Simmer uncovered another 25 minutes until beef is fork-tender and sauce thickened.",
+      "Stir in roasted peanuts at the end.",
+      "Serve with jasmine rice."
+    ],
+    "image_path": "images/massaman_curry.jpg",
+    "image_caption": "A deep golden-brown massaman curry in a rustic bowl, with tender chunks of beef, soft potato pieces, and visible whole roasted peanuts in a rich glossy sauce, topped with a curl of red chili and cilantro.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "golden brown",
+        "warm brown"
+      ],
+      "presentation": "stew in rustic bowl",
+      "visible_ingredients": [
+        "beef chunks",
+        "potato",
+        "peanuts",
+        "sauce"
+      ]
+    }
+  },
+  {
+    "id": "tom_yum_soup",
+    "name": "Tom Yum Goong",
+    "cuisine": "Thai",
+    "prep_time_min": 10,
+    "cooking_time_min": 15,
+    "total_time_min": 25,
+    "difficulty": "Easy",
+    "servings": 2,
+    "main_protein": "shrimp",
+    "spicy_level": "medium",
+    "ingredients": [
+      {
+        "name": "large shrimp",
+        "amount": 12
+      },
+      {
+        "name": "lemongrass stalk",
+        "amount": 2
+      },
+      {
+        "name": "kaffir lime leaves",
+        "amount": 4
+      },
+      {
+        "name": "galangal",
+        "amount": 4,
+        "unit": "slices"
+      },
+      {
+        "name": "Thai bird chili",
+        "amount": 3
+      },
+      {
+        "name": "straw mushrooms",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "cherry tomato",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "fish sauce",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "lime",
+        "amount": 2
+      },
+      {
+        "name": "nam prik pao (chili paste)",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cilantro",
+        "amount": 1,
+        "unit": "handful"
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "allergens": [
+      "shellfish",
+      "fish"
+    ],
+    "cooking_methods": [
+      "simmer",
+      "boil"
+    ],
+    "steps": [
+      "Bruise lemongrass with the back of a knife. Slice into pieces.",
+      "Simmer lemongrass, lime leaves, galangal, and chilies in 800ml water for 5 minutes to build aromatics.",
+      "Add mushrooms and tomato. Simmer 3 minutes.",
+      "Add shrimp. Cook 2 minutes until just pink.",
+      "Take off the heat. Stir in fish sauce, lime juice, and nam prik pao.",
+      "Taste — adjust salt, sour, and heat. Garnish heavily with cilantro."
+    ],
+    "image_path": "images/tom_yum_soup.jpg",
+    "image_caption": "A clear deep-orange spicy Thai soup with pink shrimp, halved cherry tomatoes, straw mushrooms, slices of pale galangal, lemongrass stalks, red chilies, and fresh cilantro floating in a fragrant broth.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "orange-red",
+        "pink",
+        "green"
+      ],
+      "presentation": "clear soup in deep bowl",
+      "visible_ingredients": [
+        "shrimp",
+        "tomato",
+        "lemongrass",
+        "mushrooms",
+        "cilantro"
+      ]
+    }
+  },
+  {
+    "id": "kung_pao_chicken",
+    "name": "Kung Pao Chicken",
+    "cuisine": "Sichuan",
+    "prep_time_min": 15,
+    "cooking_time_min": 10,
+    "total_time_min": 25,
+    "difficulty": "Medium",
+    "servings": 3,
+    "main_protein": "chicken",
+    "spicy_level": "medium",
+    "ingredients": [
+      {
+        "name": "boneless chicken thigh",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "roasted peanuts",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "dried red chilies",
+        "amount": 8
+      },
+      {
+        "name": "Sichuan peppercorn",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "garlic",
+        "amount": 4,
+        "unit": "cloves"
+      },
+      {
+        "name": "scallion",
+        "amount": 3,
+        "unit": "stalks"
+      },
+      {
+        "name": "dark soy sauce",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "light soy sauce",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Chinese black vinegar",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sugar",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cornstarch",
+        "amount": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free"
+    ],
+    "allergens": [
+      "peanut",
+      "soy",
+      "gluten"
+    ],
+    "cooking_methods": [
+      "stir-fry"
+    ],
+    "steps": [
+      "Cube chicken thigh. Marinate with cornstarch, 1 tsp soy, and a splash of water for 10 minutes.",
+      "Mix sauce: both soy sauces, black vinegar, sugar, and 2 tbsp water.",
+      "Heat oil in a wok until smoking. Stir-fry chicken until just cooked through.",
+      "Push chicken aside. Add dried chilies, Sichuan peppercorn, and sliced garlic. Sizzle 20 seconds.",
+      "Pour in the sauce. Toss everything to coat in glossy sauce.",
+      "Finish with roasted peanuts and chopped scallion whites."
+    ],
+    "image_path": "images/kung_pao_chicken.jpg",
+    "image_caption": "Glossy cubes of caramel-brown chicken tossed with whole dried red chilies, golden roasted peanuts, and pieces of green scallion, served on a white plate with the sauce pooling glossily.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "caramel brown",
+        "deep red",
+        "golden"
+      ],
+      "presentation": "stir-fry on white plate",
+      "visible_ingredients": [
+        "chicken cubes",
+        "dried chilies",
+        "peanuts",
+        "scallion"
+      ]
+    }
+  },
+  {
+    "id": "char_siu_pork",
+    "name": "Char Siu Pork",
+    "cuisine": "Cantonese",
+    "prep_time_min": 20,
+    "cooking_time_min": 45,
+    "total_time_min": 65,
+    "difficulty": "Medium",
+    "servings": 4,
+    "main_protein": "pork",
+    "spicy_level": "none",
+    "ingredients": [
+      {
+        "name": "pork shoulder",
+        "amount": 800,
+        "unit": "g"
+      },
+      {
+        "name": "hoisin sauce",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "honey",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Chinese cooking wine",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "light soy sauce",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "dark soy sauce",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "five-spice powder",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "garlic",
+        "amount": 3,
+        "unit": "cloves"
+      },
+      {
+        "name": "red yeast rice paste",
+        "amount": 1,
+        "unit": "tsp"
+      }
+    ],
+    "dietary_tags": [
+      "dairy-free"
+    ],
+    "allergens": [
+      "soy",
+      "gluten"
+    ],
+    "cooking_methods": [
+      "roast",
+      "glaze"
+    ],
+    "steps": [
+      "Cut pork into long strips, about 5cm thick.",
+      "Mix marinade: hoisin, soy sauces, wine, garlic, five-spice, half the honey, red yeast paste.",
+      "Marinate pork for at least 2 hours (preferably overnight).",
+      "Roast at 220°C / 425°F on a rack for 20 minutes.",
+      "Flip and brush with reserved honey. Roast 15 more minutes until edges char.",
+      "Brush with honey again. Broil 5 minutes for that lacquered finish.",
+      "Rest 10 minutes, slice across the grain."
+    ],
+    "image_path": "images/char_siu_pork.jpg",
+    "image_caption": "Glossy lacquered slices of red-mahogany Cantonese char siu pork with characteristic charred dark edges and a sticky honey glaze, fanned out on a white plate with a small mound of jasmine rice.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "deep red",
+        "mahogany",
+        "charred black"
+      ],
+      "presentation": "sliced pork on plate",
+      "visible_ingredients": [
+        "sliced pork",
+        "charred edges",
+        "glaze"
+      ]
+    }
+  },
+  {
+    "id": "bibimbap",
+    "name": "Vegetable Bibimbap",
+    "cuisine": "Korean",
+    "prep_time_min": 15,
+    "cooking_time_min": 15,
+    "total_time_min": 30,
+    "difficulty": "Medium",
+    "servings": 2,
+    "main_protein": "egg",
+    "spicy_level": "medium",
+    "ingredients": [
+      {
+        "name": "short-grain rice",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "spinach",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "carrot",
+        "amount": 1
+      },
+      {
+        "name": "zucchini",
+        "amount": 1
+      },
+      {
+        "name": "shiitake mushroom",
+        "amount": 6
+      },
+      {
+        "name": "bean sprouts",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "amount": 2
+      },
+      {
+        "name": "gochujang",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "sesame oil",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "toasted sesame seeds",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "garlic",
+        "amount": 2,
+        "unit": "cloves"
+      }
+    ],
+    "dietary_tags": [
+      "vegetarian",
+      "dairy-free"
+    ],
+    "allergens": [
+      "egg",
+      "soy",
+      "sesame"
+    ],
+    "cooking_methods": [
+      "stir-fry",
+      "boil",
+      "fry"
+    ],
+    "steps": [
+      "Cook short-grain rice.",
+      "Julienne carrot, slice zucchini, mushrooms. Blanch spinach and bean sprouts separately.",
+      "Season each vegetable individually with a little sesame oil, garlic, salt — keep them in separate piles.",
+      "Quickly sauté the carrot, zucchini, and mushrooms one at a time.",
+      "Fry the eggs sunny-side up.",
+      "Pack rice into a deep bowl. Arrange the vegetable piles in a spoke pattern on top. Place fried egg in the centre.",
+      "Top with a dollop of gochujang and a sprinkle of sesame seeds. Mix everything together at the table."
+    ],
+    "image_path": "images/bibimbap.jpg",
+    "image_caption": "An overhead view of a Korean stone bowl with white rice as the base, topped with vividly colored arranged piles of orange carrot, green spinach, pale zucchini, dark shiitake, white bean sprouts, and a sunny-side-up egg with a glossy orange yolk in the center, with a red dot of gochujang.",
+    "visual_attributes": {
+      "dominant_colors": [
+        "orange",
+        "green",
+        "white",
+        "yellow",
+        "red",
+        "brown"
+      ],
+      "presentation": "colorful arranged bowl, overhead view",
+      "visible_ingredients": [
+        "rice",
+        "carrot",
+        "spinach",
+        "zucchini",
+        "mushroom",
+        "bean sprouts",
+        "egg",
+        "gochujang"
+      ]
+    }
+  }
+]
