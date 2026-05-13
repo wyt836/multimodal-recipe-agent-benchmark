@@ -4,9 +4,15 @@ A comparative study of 4 recipe-QA architectures (V0 plain LLM → V1 text RAG �
 
 ## Install
 
+Activate your conda env first, then:
+
 ```
-py -m pip install -r src/requirements.txt
+pip install -r src/requirements.txt
 ```
+
+All commands below assume the `recipe_agent` conda env is active — use
+`python`, not the Windows `py` launcher (`py` bypasses conda and goes to
+the system Python, splitting packages across two interpreters).
 
 Then set the DeepSeek API key. Pick one:
 
@@ -23,11 +29,12 @@ Verify with `echo $env:DEEPSEEK_API_KEY` — should print your key.
 ## Run
 
 ```
-py src/benchmark.py                          # full run: 7 systems × 20 queries = 140 records
-py src/benchmark.py --systems V0,V3          # restrict systems
-py src/benchmark.py --queries QF1.1,QF3.5    # restrict queries
-py src/benchmark.py --no-cache               # force rerun
-py src/benchmark.py --score-only             # rescore existing raw_outputs.jsonl
+python src/benchmark.py                          # full run: 7 systems × 20 queries = 140 records
+python src/benchmark.py --systems V0,V3          # restrict systems
+python src/benchmark.py --queries QF1.1,QF3.5    # restrict queries
+python src/benchmark.py --no-cache               # force rerun
+python src/benchmark.py --score-only             # rescore existing raw_outputs.jsonl
+py src/visualize.py                          # render 4 result figures to eval/results/figures/
 ```
 
 ## Outputs (in `eval/results/`)
