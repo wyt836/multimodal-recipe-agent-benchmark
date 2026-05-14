@@ -11,6 +11,8 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}             % for >{\raggedright\arraybackslash}p{} columns
+\usepackage{float}             % keep key report figures/tables inside their sections
+\usepackage{placeins}          % provide \FloatBarrier for float boundaries
 \usepackage{tikz}
 \usetikzlibrary{positioning, arrows.meta}
 
@@ -23,7 +25,7 @@ A Component-Level Comparison from Plain LLM to LangGraph}
 \affiliation{%
   \institution{School of EECS, The University of Queensland}
   \city{Brisbane}\country{Australia}}
-\email{s47790726@student.uq.edu.au}
+\email{s4779072@student.uq.edu.au}
 
 \begin{abstract}
 We build a personalised recipe-QA testbed and use it to quantify the
@@ -162,7 +164,7 @@ planner+executor with a reactive \texttt{bind\_tools} loop where the LLM
 decides tool calls iteratively (capped at 6 rounds); \textsc{V3-no-verifier}
 passes executor results directly to the generator.
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
 \resizebox{\columnwidth}{!}{%
 \begin{tikzpicture}[
@@ -200,6 +202,7 @@ replace \texttt{planner+executor} with reactive \texttt{bind\_tools}
 (no-planner).}
 \label{fig:v3arch}
 \end{figure}
+\FloatBarrier
 
 % =====================================================================
 \section{Experimental Setup}
@@ -243,6 +246,7 @@ final run reported here.
 \section{Results}
 \label{sec:results}
 
+\FloatBarrier
 \subsection{Overall task success}
 
 Table~\ref{tab:taskmatrix} and Figure~\ref{fig:heatmap} show task
@@ -253,7 +257,7 @@ shows progressive gains, the move from V2 to the full V3 agent
 best overall system is in fact V3-no-planner (15/20 = 0.75), revealing
 that V3's structured planner is a net cost on the two hardest families.
 
-\begin{table}[t]
+\begin{table}[H]
 \centering\small
 \caption{Task success per system $\times$ query family ($n=5$ each).
 Overall = unweighted mean of the four families.}
@@ -274,7 +278,7 @@ V3-no-verifier  & 1.00 & 0.80 & 0.20 & 0.40 & 0.60 \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{eval/results/figures/task_success_heatmap.png}
 \caption{Task success heatmap across all seven configurations and four
@@ -282,6 +286,7 @@ query families. Darker is better.}
 \label{fig:heatmap}
 \end{figure}
 
+\FloatBarrier
 \subsection{Where each component contributes positively}
 
 \textbf{Retrieval is decisive.} Adding a single text index (V0$\to$V1)
@@ -310,10 +315,14 @@ V2 and 0.85 for V1: the verifier filters out candidates whose
 presentation descriptors, raising the share of grounded descriptors
 in the final answer.
 
+\FloatBarrier
 \subsection{When planning hurts: a negative marginal benefit}
 \label{sec:planner-neg}
 
-\begin{figure}[t]
+Figure~\ref{fig:ablation} isolates each V3 ablation against the full
+agent, making the planner regression visible by query family.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{eval/results/figures/ablation_delta.png}
 \caption{Per-family task-success delta of each ablation versus full
@@ -324,7 +333,7 @@ on these families.}
 \label{fig:ablation}
 \end{figure}
 
-Figure~\ref{fig:ablation} surfaces the most surprising result: the
+The most surprising result is that the
 \textsc{no-planner} ablation \emph{improved} task success on
 conversational (\,$+$0.40) and multi-hop ($+$0.20). On four V3 failures
 we manually inspected (QF3.1, QF3.3, QF4.4, QF4.5), the planner
@@ -341,9 +350,10 @@ calls per query (Table~\ref{tab:efficiency}) --- $\sim$3.6$\times$ the
 tokens of full V3 and over 16$\times$ those of V1. It is a
 Pareto-relevant configuration but not a Pareto winner.
 
+\FloatBarrier
 \subsection{Failure mode breakdown}
 
-\begin{table}[t]
+\begin{table}[H]
 \centering\small
 \caption{Failure-mode counts per system ($N=20$ queries). Each failed
 record is classified into exactly one of five categories.}
@@ -363,12 +373,22 @@ V3-no-verifier  & 4  & 0 & 0 & 2 & 2 & 8  \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:failures} shows the 5-class failure distribution. Three
-patterns stand out: (i)~V0 is dominated by \textit{retrieval} failures
-(10/14) --- it cannot retrieve, so it hallucinates or defers; (ii)~V1
-and V2 shift toward \textit{reasoning} failures, indicating that
-retrieval works but multi-hop aggregation breaks down (e.g. V1 on QF3.1
-mentions only the winner without listing alternatives, failing
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{eval/results/figures/failure_taxonomy.png}
+\caption{Failure taxonomy across systems. The stacked bars show how
+failures shift from missing retrieval in V0 toward reasoning, grounding,
+and citation errors once retrieval and agent components are introduced.}
+\label{fig:failure-taxonomy}
+\end{figure}
+
+Table~\ref{tab:failures} and Figure~\ref{fig:failure-taxonomy} show the
+5-class failure distribution. Three patterns stand out: (i)~V0 is
+dominated by \textit{retrieval} failures (10/14) --- it cannot retrieve,
+so it hallucinates or defers; (ii)~V1 and V2 shift toward
+\textit{reasoning} failures, indicating that retrieval works but
+multi-hop aggregation breaks down (e.g. V1 on QF3.1 mentions only the
+winner without listing alternatives, failing
 \textit{mentions-all-recipes}); (iii)~V3's failures concentrate in
 \textit{retrieval} (empty candidates from over-constrained plans) and
 \textit{citation} (recommends a recipe outside the constraint set in
@@ -376,9 +396,10 @@ multi-turn cases). V3-no-planner has the fewest failures overall (5)
 and zero \textit{retrieval} failures, again pointing at the structured
 plan as the brittle component.
 
+\FloatBarrier
 \subsection{Cost--quality trade-off}
 
-\begin{table}[t]
+\begin{table}[H]
 \centering\small
 \caption{Efficiency averages across all 20 queries.}
 \label{tab:efficiency}
@@ -397,12 +418,23 @@ V3-no-verifier  & 19.5 & 3{,}970 & 3.0 \\
 \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{eval/results/figures/cost_vs_quality.png}
+\caption{Cost--quality trade-off across configurations. Systems closer
+to the upper-left achieve higher task success with lower token cost;
+V3-no-planner improves quality but is the most expensive configuration.}
+\label{fig:cost-quality}
+\end{figure}
+
+Table~\ref{tab:efficiency} and Figure~\ref{fig:cost-quality} show that
 V0 is $\sim$11$\times$ cheaper than V3 and $\sim$41$\times$ cheaper than
 V3-no-planner, while still attaining 0.6 on factual queries. The
 report-worthy implication is that simple systems are
 \emph{operationally rational} for simple queries; the marginal benefit
 of agent complexity must be earned per query type.
 
+\FloatBarrier
 % =====================================================================
 \section{Discussion: When does complexity pay off?}
 \label{sec:discussion}
@@ -411,7 +443,7 @@ Synthesising the result tables, Table~\ref{tab:guide} summarises the
 configuration we would recommend per query family if cost were a
 binding constraint --- which it normally is in production.
 
-\begin{table}[t]
+\begin{table}[H]
 \centering\small
 \caption{Recommended configuration per query family, based on
 task success and token cost.}
@@ -427,6 +459,7 @@ Conv.          & \textbf{V3-no-planner}   & only system $>$0.4; pay for it \\
 \bottomrule
 \end{tabular}
 \end{table}
+\FloatBarrier
 
 Two design implications follow. \emph{First}, the often-cited mantra
 ``retrieve-aggressively, filter-cautiously'' is supported: V3 fails
